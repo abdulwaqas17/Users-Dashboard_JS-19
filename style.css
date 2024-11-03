@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+
+    padding: 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    font-family:"Lato", sans-serif;
+
+}
+
+/* Styling of Outer-box */
+
+.outer-box{
+
+
+
+    width: 100%;
+
+    height: 100vh;
+
+    display: flex;
+
+    /* flex-wrap: wrap; */
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: rgb(250, 250, 250);
+
+    min-width: 410px;
+
+    /* padding-top: 30px; */
+
+    /* min-height: 555px; */
+}
+
+/* Styling of Inner-box */
+
+.inner-box{
+
+    width: 400px;
+
+    /* margin: 0px auto; */
+
+    position: relative;
+
+    /* top: 50%;
+
+    transform: translateY(-50%); */
+
+    /* top: 10%; */
+
+    padding: 20px 50px;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 0px 8px 4px  #8b8b8b;
+
+    background-color: white;
+
+
+    backdrop-filter: blur(10px);
+
+    z-index: 2;
+
+}
+
+
+.signup-header h1{
+    font-size: 2.5rem;
+    color: #131010;
+    text-align: center;
+}
+
+.signup-header p{
+
+    font-size: 0.9rem;
+
+    color: #363636;
+
+    font-weight: 600;
+}
+
+/* Stylin of signup-body */
+
+.signup-body{
+
+    margin: 20px 0;
+
+}
+
+.signup-body .input{
+
+    margin: 10px 0;
+
+}
+
+.signup-body .input label{
+
+    display: block;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+}
+
+.signup-body>form>.input>input , select{
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid gray;
+
+    border-radius: 5px;
+
+    font-size: 1rem;
+
+    margin-top: 5px;
+
+}
+
+.button{
+
+    border: none;
+
+    background-color: #3498db;
+
+    color: white;
+
+    cursor: pointer;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    font-size: 1rem;
+
+    margin-top: 5px;
+
+}
+
+.input p {
+
+    text-align: center;
+    color: rgb(82, 82, 82);
+
+}
+
+.input p a {
+
+    text-decoration: none;
+    color: rgb(0, 116, 248);
+    
+}
+/* Hover State of Submit */
+
+.button:hover{
+
+    background-color: #206796;
+    
+}
+
+
+
+/* Styling of Circles */
+
+.circle{
+
+    height: 220px;
+
+    width: 220px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.596), white);
+
+    position: absolute;
+
+}
+
+.c1{
+
+    top: 30px;
+
+    left: 20px;
+
+}
+/* 
+.c2{
+
+    bottom: 10px;
+
+    right: 30px;
+} */
+
+
+/* styling for  showText is here */
+#showText{
+
+    /* padding: 10px 30px; */
+    width: 450px;
+    padding: 30px 20px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 3px 3px 5px  #206796;
+    background: linear-gradient(to top left, white ,rgba(255, 255, 255, 0.205));
+    backdrop-filter: blur(10px);
+    z-index: 2;
+
+}
+
+#showText h2{
+
+    text-align: center;
+    margin-block: 20px 50px;
+    font-size: 1.7rem;
+    color: #131010;
+
+}
+
+#showText p{
+
+    margin-block: 48px;
+    font-size: 1.2rem;
+
+}
+
+#showText .last{
+
+    margin-block: 100px 50px;
+    text-align: center;
+    /* font-size: 0.96rem; */
+
+}
+
+
+
+
+/* media query is here */
+/* for tablet */
+@media (min-width:425px) and (max-width:768px){
+
+    .outer-box{
+
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+    }
+    
+}
+
+@media (max-width:425px){
+
+    .outer-box{
+
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .inner-box,#showText {
+
+        width: 300px;
+    }
+    
+}
