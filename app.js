@@ -1,20 +1,21 @@
 // if data exist in localStorage OTHERWISE empty array
 console.log('ABC');
-var users;
+// var users;
 
 // 2nd way 
-if(!window.localStorage.getItem('lineRun')) {
-    users = [];
-    console.log(users);
-    window.localStorage.setItem('lineRun',true)
-} else {
+// if(!window.localStorage.getItem('lineRun')) {
+//     users = [];
+//     console.log(users);
+//     window.localStorage.setItem('lineRun',true)
+// } else {
 
-    users = JSON.parse(window.localStorage.getItem('Users'));
-    console.log(users);
-}
+//     users = JSON.parse(window.localStorage.getItem('Users'));
+//     console.log(users);
+
+// }
  
 // 1st way 
-// let users = JSON.parse(window.localStorage.getItem('Users')) || [];
+let users = JSON.parse(window.localStorage.getItem('Users')) || [];
 console.log(users);
 
 // getting data through id and store in local storage 
@@ -53,26 +54,40 @@ function signupDataStore() {
             for (var i = 0; i < users.length; i++) {
 
                 console.log('yeloo');
+                var userIs;
+
                 if (usersData.userEmail !== users[i].userEmail) {
-    
-                    // push an obj in the users array 
-                    users.push(usersData);
-                    console.log(users);         
-                    // convert array into string 
-                    let usersStr = JSON.stringify(users);
-                    console.log(usersStr);
-                    // store user array (string form) in local storage 
-                    window.localStorage.setItem('Users',usersStr);
-                    // to render login page 
-                    window.location.href ='./login/login.html'; 
-                    
+                  
+                    userIs = 'new';
+                    console.log(userIs);
                     
                 } else {
     
                     alert('this email already exits, use another email');
+                    userIs = 'old';
+                    console.log(userIs);
                     break;
                 }
+
             } 
+
+            console.log(userIs);
+            
+            if (userIs == 'new') {
+
+                 // push an obj in the users array 
+                 users.push(usersData);
+                 console.log(users);         
+                 // convert array into string 
+                 let usersStr = JSON.stringify(users);
+                 console.log(usersStr);
+                 // store user array (string form) in local storage 
+                 window.localStorage.setItem('Users',usersStr);
+                 // to render login page 
+                 window.location.href ='./login/login.html'; 
+
+            }
+
 
         } else {
 
@@ -113,8 +128,8 @@ function signupDataStore() {
 function againSignUp() {
 
     // rander back to sign up page
-    // document.location.href = './../index.html';
-    window.location.replace('./../index.html');
+    document.location.href = './../index.html';
+    // window.location.replace('./../index.html');
     // return false;
 
 }
@@ -149,6 +164,8 @@ function loginMatchData() {
     // condition to check if data match, then go to homegape, other wise You write wrong data in login 
         for ( var i = 0; i < parseUsers.length; i++) {
 
+            var isUser;
+
             if (
 
                 userLoginEmail == parseUsers[i].userEmail &&
@@ -156,20 +173,30 @@ function loginMatchData() {
                 
             ) {
 
+               isUser = 'match'; 
                alert('Login Successfully, Go to Homepage');
                window.location.href = './../homepage/home.html';
-
+               break;
 
             } else {
 
-                alert('Incorrect Name , Email or Password');
+                isUser = 'not match'
+                // alert('Incorrect Name , Email or Password');
 
             }
 
         } 
 
+        if (isUser == 'not match') {
+
+            alert('Incorrect Name , Email or Password');
+
+        }
+
        
 }
+
+
 
 
 function showProfile() {
