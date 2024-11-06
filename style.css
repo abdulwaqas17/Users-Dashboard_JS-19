@@ -11,31 +11,21 @@
 
 }
 
+
+/* ----------FOR FORMS --------- */
+
 /* Styling of Outer-box */
 
-.outer-box{
-
-
+.signup,.login{
 
     width: 100%;
-
     height: 100vh;
-
     display: flex;
-
-    /* flex-wrap: wrap; */
-
     justify-content: center;
-
     align-items: center;
-
     background-color: rgb(250, 250, 250);
-
     min-width: 410px;
 
-    /* padding-top: 30px; */
-
-    /* min-height: 555px; */
 }
 
 /* Styling of Inner-box */
@@ -43,28 +33,12 @@
 .inner-box{
 
     width: 400px;
-
-    /* margin: 0px auto; */
-
     position: relative;
-
-    /* top: 50%;
-
-    transform: translateY(-50%); */
-
-    /* top: 10%; */
-
     padding: 20px 50px;
-
     border-radius: 15px;
-
     box-shadow: 0px 0px 8px 4px  #8b8b8b;
-
     background-color: white;
-
-
     backdrop-filter: blur(10px);
-
     z-index: 2;
 
 }
@@ -102,9 +76,7 @@
 .signup-body .input label{
 
     display: block;
-
     font-size: 1rem;
-
     font-weight: 600;
 
 }
@@ -112,15 +84,10 @@
 .signup-body>form>.input>input , select{
 
     width: 100%;
-
     padding: 10px;
-
     border: 1px solid gray;
-
     border-radius: 5px;
-
     font-size: 1rem;
-
     margin-top: 5px;
 
 }
@@ -170,74 +137,26 @@
 
 
 
-/* Styling of Circles */
 
-.circle{
 
-    height: 220px;
 
-    width: 220px;
+/* -------- CLASSES FOR JAVASCRIPT --------- */
+.liStyle {
 
-    border-radius: 50%;
-
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.596), white);
-
-    position: absolute;
+    background-color: var(--color2);
+    color: white !important;
 
 }
 
-.c1{
+.none {
 
-    top: 30px;
-
-    left: 20px;
-
-}
-/* 
-.c2{
-
-    bottom: 10px;
-
-    right: 30px;
-} */
-
-
-/* styling for  showText is here */
-#showText{
-
-    /* padding: 10px 30px; */
-    width: 450px;
-    padding: 30px 20px;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    box-shadow: 3px 3px 5px  #206796;
-    background: linear-gradient(to top left, white ,rgba(255, 255, 255, 0.205));
-    backdrop-filter: blur(10px);
-    z-index: 2;
-
+    display: none;
+    
 }
 
-#showText h2{
+.show {
 
-    text-align: center;
-    margin-block: 20px 50px;
-    font-size: 1.7rem;
-    color: #131010;
-
-}
-
-#showText p{
-
-    margin-block: 48px;
-    font-size: 1.2rem;
-
-}
-
-#showText .last{
-
-    margin-block: 100px 50px;
-    text-align: center;
-    /* font-size: 0.96rem; */
+    display: flex;
 
 }
 

@@ -1,0 +1,104 @@
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+/* root classes  */
+:root {
+
+    --color1 : rgb(60,74,85);
+    --color2 : rgb(35,48,59);
+    --color3 : rgb(152,160,163);
+}
+/* utility classes  */
+.flex {
+
+    display: flex;
+
+}
+
+
+
+.dashboard{
+
+    height: 100vh;
+
+}
+
+
+/* styling for dashboardLeft is here  */
+.dashboardLeft {
+
+    width: 15%;
+    height: 100vh;
+    background-color: var(--color1);
+    
+}
+
+.logo h2{
+
+    padding: 30px 0px 20px 20px;
+    color: white;
+
+}
+
+.links li {
+
+    padding: 15px 20px;
+    /* margin-bottom: 3px; */
+    border: 1px solid rgba(148, 148, 148, 0.082);
+
+}
+
+.links a{
+
+    text-decoration: none;
+    color: var(--color3);
+
+}
+
+
+.links li:hover {
+
+    background-color: var(--color2);
+    
+}
+
+.links li:hover a {
+
+    color: white;
+    
+}
+
+
+
+
+
+
+/* styling for dashboardRight is here  */
+.dashboardRight {
+
+    width: 90%;
+    height: 100vh;
+    background-color: rgb(252, 252, 252);
+    
+}
+
+.dashboardRightContainer {
+
+    padding: 40px;
+
+}
+
+.dashboardRightContainer h1 {
+
+    font-size: 4rem;
+    color: blue;
+    
+}

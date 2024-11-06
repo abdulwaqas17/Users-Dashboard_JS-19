@@ -79,7 +79,6 @@
 
 
 
-
 /* styling for dashboardRight is here  */
 .dashboardRight {
 
@@ -190,7 +189,7 @@
 /* styling for profileSection is here  */
 .profileSection>div {
 
-    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.308);
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.178);
     padding: 20px 30px;
     border-radius: 10px;
     margin-block: 15px;
