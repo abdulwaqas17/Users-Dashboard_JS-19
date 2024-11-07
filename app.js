@@ -39,6 +39,7 @@ function signupDataStore() {
     // console.log(users);
     console.log('here')
 
+    // check user puts all the values 
     if ( usersData.userName && usersData.userEmail && usersData.userPhone && usersData.userPassword && usersData.userCity && usersData.userRole && usersData.userBirthDay ) {
 
         console.log('heloo');
@@ -47,15 +48,18 @@ function signupDataStore() {
 
         // users.push(usersData);
 
+        // for check if any users already exits 
         if ( users.length >= 1 ) {
 
             console.log('teloo');
-
+                
+            // loop to check all the users one by one 
             for (var i = 0; i < users.length; i++) {
 
                 console.log('yeloo');
                 var userIs;
 
+                // if exciting users email does not match to new user email, So assign 'new' in userIs,
                 if (usersData.userEmail !== users[i].userEmail) {
                   
                     userIs = 'new';
@@ -89,7 +93,7 @@ function signupDataStore() {
             }
 
 
-        } else {
+        } else { //if user is first
 
             users.push(usersData);
             console.log(users);         
@@ -104,7 +108,7 @@ function signupDataStore() {
         }
         
 
-    } else {
+    } else { //if user doesn't fill details 
 
         alert('Kindly fill all the details');
 
@@ -124,7 +128,7 @@ function signupDataStore() {
 
 // console.log(users);
 
-
+// for rander back to signup page 
 function againSignUp() {
 
     // rander back to sign up page
@@ -134,6 +138,7 @@ function againSignUp() {
 
 }
 
+// for rander back to login page 
 function againLogin() {
 
     // rander back to sign up page
@@ -164,8 +169,10 @@ function loginMatchData() {
     // condition to check if data match, then go to homegape, other wise You write wrong data in login 
         for ( var i = 0; i < parseUsers.length; i++) {
 
+            // declare isUser for prevent Multiple times answer
             var isUser;
 
+            // if userLoginData match with any userData so assign 'match' in isUser 
             if (
 
                 userLoginEmail == parseUsers[i].userEmail &&
@@ -174,6 +181,7 @@ function loginMatchData() {
             ) {
 
                isUser = 'match'; 
+               window.localStorage.setItem('lastLoginUserEmail',userLoginEmail);
                alert('Login Successfully, Go to Homepage');
                window.location.href = './../homepage/home.html';
                break;
@@ -200,6 +208,8 @@ function loginMatchData() {
 
 
 function showProfile() {
+
+    window.location.href = './../profile/profile.html';
 
     document.querySelector('.dashboardRight').innerHTML = `   
     
@@ -361,166 +371,170 @@ function showProfile() {
 
 </div>`
  
-    document.getElementById('profileLi').classList.add('liStyle');
-    document.getElementById('dashboardLi').classList.remove('liStyle');
+    // document.getElementById('profileLi').classList.add('liStyle');
+    // document.getElementById('dashboardLi').classList.remove('liStyle');
 
 }
 
 function showDashboard() {
 
-    document.querySelector('.dashboardRight').innerHTML = `
+    window.location.href = './../dasboard/dashboard.html';
+
+    document.querySelector('.dashboardRightContainer').innerText = 'abc'
+
+//     document.querySelector('.dashboardRight').innerHTML = `
     
-<div class="dashboardRightContainer">
+// <div class="dashboardRightContainer">
 
-    <!-- dashboardRightHeader is here  -->
-    <div class="dashboardRightHeader">
-
-
-        <div class="dashboardRightHeaderNav flex">
-
-        <!-- dashboardRightHeaderHeading is here  -->
-        <h2 class="dashboardRightHeaderHeading">USERS</h2>
-
-        <!-- dashboardRightHeaderRightSide is here  -->
-        <div class="dashboardRightHeaderRightSide flex">
-
-            <div class="dashboardRightHeaderSearch flex">
-
-                <span>@</span>
-                <input type="text" placeholder="Search">
-
-            </div>
-
-            <button class="dashboardRightHeaderAddBtn">
-
-                ADD USERS
-
-            </button>
-
-            <button class="dashboardRightHeaderInOf flex">
-
-                <span> • • • </span>
-
-            </button>
+//     <!-- dashboardRightHeader is here  -->
+//     <div class="dashboardRightHeader">
 
 
+//         <div class="dashboardRightHeaderNav flex">
 
-        </div>
-        </div>
+//         <!-- dashboardRightHeaderHeading is here  -->
+//         <h2 class="dashboardRightHeaderHeading">USERS</h2>
 
-        <!-- dashboardRightHeaderUsers is here  -->
-        <div class="dashboardRightHeaderUsers">
+//         <!-- dashboardRightHeaderRightSide is here  -->
+//         <div class="dashboardRightHeaderRightSide flex">
 
-            <ul class="flex">
+//             <div class="dashboardRightHeaderSearch flex">
 
-                <li><a href="#">All Users 235</a></li>
+//                 <span>@</span>
+//                 <input type="text" placeholder="Search">
 
-                <li><a href="#">Admins 35</a></li>
+//             </div>
 
-                <li><a href="#">Managers 50</a></li>
+//             <button class="dashboardRightHeaderAddBtn">
 
-                <li><a href="#">Employes 150</a></li>
+//                 ADD USERS
 
-            </ul>
-        </div>
+//             </button>
 
-    </div>
+//             <button class="dashboardRightHeaderInOf flex">
 
-    <!-- dashboardRightData is here  -->
-    <div class="dashboardRightData">
+//                 <span> • • • </span>
 
-        <table>
-
-            <tr class="Tableheadings">
+//             </button>
 
 
-                <td>User Name</td>
-                <td>User Email</td>
-                <td>User City</td>
-                <td>User Type</td>
 
-            </tr>
+//         </div>
+//         </div>
 
-            <tr>
+//         <!-- dashboardRightHeaderUsers is here  -->
+//         <div class="dashboardRightHeaderUsers">
 
-                <td>Muhammad Waqas</td>
-                <td>waqas123@gmail.com</td>
-                <td>Karachi</td>
-                <td>Admin</td>
+//             <ul class="flex">
 
-            </tr>  
+//                 <li><a href="#">All Users 235</a></li>
 
-            <tr>
+//                 <li><a href="#">Admins 35</a></li>
 
-                <td>Zeeshan Ahmed</td>
-                <td>zeeshansd63@gmail.com</td>
-                <td>Lahore</td>
-                <td>Manager</td>
+//                 <li><a href="#">Managers 50</a></li>
 
-            </tr>
+//                 <li><a href="#">Employes 150</a></li>
 
-            <tr>
+//             </ul>
+//         </div>
 
-                <td>Nehal Qureshi</td>
-                <td>nehal80@gmail.com</td>
-                <td>Multan</td>
-                <td>Employe</td>
+//     </div>
 
-            </tr>
+//     <!-- dashboardRightData is here  -->
+//     <div class="dashboardRightData">
 
-            <tr>
+//         <table>
 
-                <td>Abdullah</td>
-                <td>abdullah99@gmail.com</td>
-                <td>Quetta</td>
-                <td>Admin</td>
+//             <tr class="Tableheadings">
 
-            </tr>
 
-            <tr>
+//                 <td>User Name</td>
+//                 <td>User Email</td>
+//                 <td>User City</td>
+//                 <td>User Type</td>
 
-                <td>Muhammad Waqas</td>
-                <td>waqas123@gmail.com</td>
-                <td>Karachi</td>
-                <td>Admin</td>
+//             </tr>
 
-            </tr>  
+//             <tr>
 
-            <tr>
+//                 <td>Muhammad Waqas</td>
+//                 <td>waqas123@gmail.com</td>
+//                 <td>Karachi</td>
+//                 <td>Admin</td>
 
-                <td>Zeeshan Ahmed</td>
-                <td>zeeshansd63@gmail.com</td>
-                <td>Lahore</td>
-                <td>Manager</td>
+//             </tr>  
 
-            </tr>
+//             <tr>
 
-            <tr>
+//                 <td>Zeeshan Ahmed</td>
+//                 <td>zeeshansd63@gmail.com</td>
+//                 <td>Lahore</td>
+//                 <td>Manager</td>
 
-                <td>Nehal Qureshi</td>
-                <td>nehal80@gmail.com</td>
-                <td>Multan</td>
-                <td>Employe</td>
+//             </tr>
 
-            </tr>
+//             <tr>
 
-            <tr>
+//                 <td>Nehal Qureshi</td>
+//                 <td>nehal80@gmail.com</td>
+//                 <td>Multan</td>
+//                 <td>Employe</td>
 
-                <td>Abdullah</td>
-                <td>abdullah99@gmail.com</td>
-                <td>Quetta</td>
-                <td>Admin</td>
+//             </tr>
 
-            </tr>
+//             <tr>
 
-        </table>
+//                 <td>Abdullah</td>
+//                 <td>abdullah99@gmail.com</td>
+//                 <td>Quetta</td>
+//                 <td>Admin</td>
+
+//             </tr>
+
+//             <tr>
+
+//                 <td>Muhammad Waqas</td>
+//                 <td>waqas123@gmail.com</td>
+//                 <td>Karachi</td>
+//                 <td>Admin</td>
+
+//             </tr>  
+
+//             <tr>
+
+//                 <td>Zeeshan Ahmed</td>
+//                 <td>zeeshansd63@gmail.com</td>
+//                 <td>Lahore</td>
+//                 <td>Manager</td>
+
+//             </tr>
+
+//             <tr>
+
+//                 <td>Nehal Qureshi</td>
+//                 <td>nehal80@gmail.com</td>
+//                 <td>Multan</td>
+//                 <td>Employe</td>
+
+//             </tr>
+
+//             <tr>
+
+//                 <td>Abdullah</td>
+//                 <td>abdullah99@gmail.com</td>
+//                 <td>Quetta</td>
+//                 <td>Admin</td>
+
+//             </tr>
+
+//         </table>
         
-    </div>
+//     </div>
 
-</div>`
+// </div>`
     
-    document.getElementById('dashboardLi').classList.add('liStyle');
-    document.getElementById('profileLi').classList.remove('liStyle');
+    // document.getElementById('dashboardLi').classList.add('liStyle');
+    // document.getElementById('profileLi').classList.remove('liStyle');
 
 }
 

@@ -27,17 +27,21 @@
 
     <input type="email" name="" id="one">
 
+    <button onclick="a()">Click 1</button>
+
+    <button onclick="b()">Click 2</button>
+
 </body>
 
 
 <script>
 
-let a;
-if(2 > 1) {
-    a = 'abc';
-    console.log(a);
-}
-console.log(a);
+// let a;
+// if(2 > 1) {
+//     a = 'abc';
+//     console.log(a);
+// }
+// console.log(a);
 
 // function my() {
     
@@ -92,6 +96,18 @@ console.log(a);
     // console.log(parse);
 
     // console.log(arrObj[1].fName);
+
+    var o = document.getElementsByTagName('button')[1];
+    function a() {
+
+        console.log('abc');
+
+        function b() {
+
+            console.log('xyz')
+
+        }
+    }
 
 </script>
 </html>
