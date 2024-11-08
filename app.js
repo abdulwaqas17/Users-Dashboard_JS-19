@@ -15,7 +15,7 @@ console.log('ABC');
 // }
  
 // 1st way 
-let users = JSON.parse(window.localStorage.getItem('Users')) || [];
+var users = JSON.parse(window.localStorage.getItem('Users')) || [];
 console.log(users);
 
 // getting data through id and store in local storage 
@@ -36,7 +36,7 @@ function signupDataStore() {
 
     // // push an obj in the users array 
     // users.push(usersData);
-    // console.log(users);
+    console.log(users);
     console.log('here')
 
     // check user puts all the values 
@@ -380,7 +380,9 @@ function showDashboard() {
 
     window.location.href = './../dasboard/dashboard.html';
 
-    document.querySelector('.dashboardRightContainer').innerText = 'abc'
+    // document.querySelector('.dashboardRightContainer').innerText = 'abc';
+    // document.getElementById('tableForData').innerHTML += 'Hello';
+    // document.getElementById('abcd').innerHTML = 'Hello';
 
 //     document.querySelector('.dashboardRight').innerHTML = `
     

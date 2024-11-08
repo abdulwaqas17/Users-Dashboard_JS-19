@@ -117,7 +117,10 @@
 
                         </tr>
 
-                        <tr>
+                        <tbody id="trForUsers">
+
+                            
+                        <!-- <tr>
 
                             <td>Muhammad Waqas</td>
                             <td>waqas123@gmail.com</td>
@@ -187,8 +190,9 @@
                             <td>Quetta</td>
                             <td>Admin</td>
 
-                        </tr>
+                        </tr> -->
 
+                        </tbody>
                     </table>
                     
                 </div>
@@ -206,6 +210,102 @@
     
     <script>
         // document.querySelector('.dashboardRightContainer').innerText = 'abc'
+        // document.getElementById('abcd').innerHTML = 'Hello';
+
+        // get tbody for inserting tr in it (storing the data)
+        var trForUsers = document.getElementById('trForUsers');
+
+        // get login email of current user from local Storage  
+        var currentUserEmail = window.localStorage.getItem('lastLoginUserEmail'); 
+        console.log(currentUserEmail);
+
+        // get current all users from local Storage 
+        var currentAllUsers = JSON.parse(window.localStorage.getItem('Users'));
+        console.log(currentAllUsers);
+
+        // get the obj of current user through its UNIQUE email 
+        for (var i = 0; i < currentAllUsers.length; i++ ) {
+
+            if (currentUserEmail == currentAllUsers[i].userEmail) {
+
+                // current user data store in this variable 
+                var currentUserData = currentAllUsers[i];
+                console.log(currentUserData);
+                break;
+
+            }
+        }
+
+        console.log(currentUserData);
+        // if current user is admin So,
+        if (currentUserData.userRole == 'Admin') {
+
+            // loop for accessing all user data through iteration
+            for (var j = 0; j < currentAllUsers.length; j++) {
+
+                // shows all the data to admin (No condition for admin )
+                trForUsers.innerHTML += `
+                <tr>
+
+                    <td>${currentAllUsers[j].userName}</td>
+                    <td>${currentAllUsers[j].userEmail}</td>
+                    <td>${currentAllUsers[j].userCity}</td>
+                    <td>${currentAllUsers[j].userRole}</td>
+
+                </tr> 
+                `
+            }
+
+        } 
+        // if current user is Manager 
+        else if (currentUserData.userRole == 'Manager') {
+
+            // loop for accessing all user data through iteration
+            for (var k = 0; k < currentAllUsers.length; k++) {
+
+                // for prevent to show Admin data to manager 
+               if (currentAllUsers[k].userRole !== 'Admin') {
+                trForUsers.innerHTML += `
+                <tr>
+
+                    <td>${currentAllUsers[k].userName}</td>
+                    <td>${currentAllUsers[k].userEmail}</td>
+                    <td>${currentAllUsers[k].userCity}</td>
+                    <td>${currentAllUsers[k].userRole}</td>
+
+                </tr>
+                
+                `
+               }
+            }
+
+        }
+        // if current user is Employee 
+        else if (currentUserData.userRole == 'Employee') {
+
+            // loop for accessing all user data through iteration
+            for (var l = 0; l < currentAllUsers.length; l++) {
+
+                // for to show only employee data 
+                if(currentAllUsers[l].userRole == 'Employee') {
+
+                    trForUsers.innerHTML += `
+                <tr>
+
+                    <td>${currentAllUsers[l].userName}</td>
+                    <td>${currentAllUsers[l].userEmail}</td>
+                    <td>${currentAllUsers[l].userCity}</td>
+                    <td>${currentAllUsers[l].userRole}</td>
+
+                </tr>
+
+                `
+
+                }
+            }
+        }
+
+
     </script>
 </body>
 </html>

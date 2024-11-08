@@ -38,6 +38,9 @@
     width: 15%;
     height: 100vh;
     background-color: var(--color1);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
     
 }
 
@@ -87,6 +90,7 @@
     width: 90%;
     height: 100vh;
     background-color: rgb(252, 252, 252);
+    margin-left:15% ;
     
 }
 
