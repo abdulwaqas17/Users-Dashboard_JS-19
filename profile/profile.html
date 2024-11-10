@@ -127,8 +127,8 @@
                             <p id="pUserRole">Admin</p>
 
                             
-                        <button class="editButton">
-                            <span>#</span> Edit
+                        <button class="saveButton none" onclick="saveData()">
+                            <span>#</span> Save Changes
                         </button>
 
                         </div>
@@ -139,7 +139,7 @@
                     <div class="profileMid">
 
                         <h2>Personal Information</h2>
-                        <button class="editButton">
+                        <button class="editButton" onclick="editData()">
                             <span>#</span> Edit
                         </button>
 
@@ -181,7 +181,7 @@
                     <div class="profileBottom">
 
                         <h2>Address </h2>
-                        <button class="editButton">
+                        <button class="editButton" onclick="editData()">
                             <span>#</span> Edit
                         </button>
 
@@ -213,6 +213,8 @@
 
     </div>
 
+    
+
 
     <script src="./../app.js"></script>
 
@@ -243,6 +245,42 @@
         console.log(currentUserData);
         console.log(currentUserIndex);
 
+        function editData() {
+
+            var uName = document.getElementById('input1');
+            uName.disabled = false;
+            var uEmail = document.getElementById('input2').disabled = false;
+            var uBirthDay = document.getElementById('input3').disabled = false;
+            var uPhone = document.getElementById('input4').disabled = false;
+            var uCity = document.getElementById('input5').disabled = false;
+
+            document.querySelector('.saveButton').classList.remove('none');
+
+        }
+
+        function saveData() {
+
+            console.log('now');
+            currentUserData.userName = document.getElementById('input1').value;
+            currentUserData.userEmail = document.getElementById('input2').value;
+            currentUserData.userBirthDay = document.getElementById('input3').value;
+            currentUserData.userPhone = document.getElementById('input4').value;
+            currentUserData.userCity = document.getElementById('input5').value;
+            currentUserData.userPassword = currentUserData.userPassword;
+            currentUserData.userRole = currentUserData.userRole;
+
+            console.log('save');
+
+            currentAllUsers.splice(currentUserIndex,1,currentUserData);
+
+            alert('Your Changes Successfully changed, Refreash the page');
+
+            window.localStorage.setItem('Users',JSON.stringify(currentAllUsers));
+
+        }
+
+
+
         var h2UserName = document.getElementById('h2UserName');
         h2UserName.innerHTML = currentUserData.userName;
 
@@ -259,30 +297,31 @@
 <tr>
     
     <td>User Name</td>
-    <td>${currentUserData.userName}</td>
+    <td><input type="text" id='input1' value="${currentUserData.userName}" disabled></td>
 
 </tr>
 
 <tr>
 
     <td>User Email</td>
-    <td>${currentUserData.userEmail}</td>
+    <td><input type="text" id='input2' value="${currentUserData.userEmail}" disabled></td>
 
 </tr>
 
 <tr>
 
     <td>User Birth Day</td>
-    <td>${currentUserData.userBirthDay}</td>
+    <td><input type="text" id='input3' value="${currentUserData.userBirthDay}" disabled></td>
 
 </tr>
 
 <tr>
 
     <td>User Phone No.</td>
-    <td>${currentUserData.userPhone}</td>
+    <td><input type="text" id='input4' value="${currentUserData.userPhone}" disabled></td>
 
 </tr>
+
         ` 
 
     var userAddress = document.getElementById('userAddress');
@@ -291,14 +330,14 @@
 <tr>
 
 <td>Country</td>
-<td>Pakistan</td>
+<td><input type="text" value="Pakistan" disabled></td>
 
 </tr>
 
 <tr>
 
 <td>City</td>
-<td>${currentUserData.userCity}</td>
+<td><input type="text" id='input5' value="${currentUserData.userCity}" disabled></td>
 
 </tr>
     

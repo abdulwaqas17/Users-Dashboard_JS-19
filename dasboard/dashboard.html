@@ -310,14 +310,53 @@
             }
         }
 
+        // i write this but By mistake bottom line work perfectly 
+        // var deleteUser = document.querySelectorAll('.deleteUser');
+
+        // get parent of tr for deleting the tr and its userObj 
         var deleteUser = document.getElementById('trForUsers');
+
+        // make a function for delete user 
         deleteUser.addEventListener('click', function(e){
 
-            console.log(e);
-            
+            // console.log(e.target.previousElementSibling.previousElementSibling.previousElementSibling);
+
+            // get the email of desire users 
+            var deleteUserEmail = e.target.previousElementSibling.previousElementSibling.previousElementSibling.childNodes[0].nodeValue;
+            // var deleteUserEmail = deletUsertd;
+            console.log(deleteUserEmail);
+
+            // get the allUsers form localStorage 
+            var allUsers = JSON.parse(window.localStorage.getItem('Users'));
+            console.log(allUsers);
+
+            // loop for get desire obj 
+            for (var i = 0; i < allUsers.length; i++) {
+
+                // check if the email match 
+                if(deleteUserEmail == allUsers[i].userEmail) {
+
+                    var deleteUserObj = allUsers[i];
+                    // get the index no. of desire user for delete this 
+                    var deleteUserIndex = i;
+
+                    console.log(deleteUserObj);
+                    console.log(deleteUserIndex);
+                    // break if the work is done 
+                    break;
+
+                }
+            }
+
+            // delete the user from array through splice  
+            allUsers.splice(deleteUserIndex,1);
+            window.localStorage.setItem('Users',JSON.stringify(allUsers));
+            alert(deleteUserObj.userName + ' deleted successfully, Refreash the page')
+
+
         });
     
-        console.dir(trForUsers);
+        // console.dir(trForUsers);
 
 
     </script>
