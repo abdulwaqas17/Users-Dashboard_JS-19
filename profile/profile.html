@@ -25,19 +25,21 @@
             <!-- links is here  -->
             <div class="links">
 
+             
                 <ul>
                     
-                    <li onclick="showDashboard()"><a href="#">Dashboard</a></li>
+                    <li onclick="showHome()"><a href="javascript:void(0)">Home</a></li>
 
-                    <li onclick="showProfile()"><a href="#">Profile</a></li>
+                    <li onclick="showDashboard()"><a href="javascript:void(0)" >Dashboard</a></li>
 
-                    <li><a href="#">All Users</a></li>
+                    <li  onclick="showProfile()"><a href="javascript:void(0)">Profile</a></li>
 
-                    <li><a href="#">Admins</a></li>
+                    <li onclick="showServices()"><a href="#">Services</a></li>
 
-                    <li><a href="#">Managers</a></li>
+                    <li onclick="showAbout()"><a href="#">About Us</a></li>
 
-                    <li><a href="#">Employes</a></li>
+                    <li onclick="showContact()"><a href="#">Contact Us</a></li>
+
 
                 </ul>
 
@@ -62,17 +64,17 @@
     
                         <!-- dashboardRightHeaderRightSide is here  -->
                          <div class="dashboardRightHeaderRightSide flex">
-    
+<!--     
                             <div class="dashboardRightHeaderSearch flex">
     
                                 <span>@</span>
                                 <input type="text" placeholder="Search">
     
-                            </div>
+                            </div> -->
     
-                            <button class="dashboardRightHeaderAddBtn">
+                            <button class="dashboardRightHeaderAddBtn" id="logoutBtn" onclick="logOut()">
     
-                                ADD USERS
+                                Log Out
     
                             </button>
     
@@ -120,9 +122,9 @@
                         <!-- profileName is here  -->
                         <div class="profileName">
 
-                            <h2>Muhammad Waqas</h2>
-                            <p>waqas123@gmail.com</p>
-                            <p>Admin</p>
+                            <h2 id="h2UserName">Muhammad Waqas</h2>
+                            <p id="pUserEmail">waqas123@gmail.com</p>
+                            <p id="pUserRole">Admin</p>
 
                             
                         <button class="editButton">
@@ -141,7 +143,7 @@
                             <span>#</span> Edit
                         </button>
 
-                        <table>
+                        <table id="personalInformation">
 
                             <tr>
                                 
@@ -183,7 +185,7 @@
                             <span>#</span> Edit
                         </button>
 
-                        <table>
+                        <table id="userAddress">
 
                             <tr>
 
@@ -213,5 +215,103 @@
 
 
     <script src="./../app.js"></script>
+
+    <script>
+
+        // get login email of current user from local Storage  
+        var currentUserEmail = window.localStorage.getItem('lastLoginUserEmail'); 
+        console.log(currentUserEmail);
+
+        // get current all users from local Storage 
+        var currentAllUsers = JSON.parse(window.localStorage.getItem('Users'));
+        console.log(currentAllUsers);
+
+        // get the obj of current user through its UNIQUE email 
+        for (var i = 0; i < currentAllUsers.length; i++ ) {
+
+            if (currentUserEmail == currentAllUsers[i].userEmail) {
+
+                // current user data store in this variable 
+                var currentUserData = currentAllUsers[i];
+                var currentUserIndex = i; 
+                console.log(currentUserData);
+                break;
+
+            }
+        }
+
+        console.log(currentUserData);
+        console.log(currentUserIndex);
+
+        var h2UserName = document.getElementById('h2UserName');
+        h2UserName.innerHTML = currentUserData.userName;
+
+        var pUserEmail = document.getElementById('pUserEmail');
+        pUserEmail.innerHTML = currentUserData.userEmail;
+
+        var pUserRole = document.getElementById('pUserRole');
+        pUserRole.innerHTML = currentUserData.userRole;
+
+        var personalInformation = document.getElementById('personalInformation');
+        personalInformation.innerHTML = `
+
+
+<tr>
+    
+    <td>User Name</td>
+    <td>${currentUserData.userName}</td>
+
+</tr>
+
+<tr>
+
+    <td>User Email</td>
+    <td>${currentUserData.userEmail}</td>
+
+</tr>
+
+<tr>
+
+    <td>User Birth Day</td>
+    <td>${currentUserData.userBirthDay}</td>
+
+</tr>
+
+<tr>
+
+    <td>User Phone No.</td>
+    <td>${currentUserData.userPhone}</td>
+
+</tr>
+        ` 
+
+    var userAddress = document.getElementById('userAddress');
+    userAddress.innerHTML = `
+
+<tr>
+
+<td>Country</td>
+<td>Pakistan</td>
+
+</tr>
+
+<tr>
+
+<td>City</td>
+<td>${currentUserData.userCity}</td>
+
+</tr>
+    
+    `    
+function logOut() {
+
+    currentAllUsers.splice(currentUserIndex,1);
+    window.localStorage.setItem('Users', JSON.stringify(currentAllUsers));
+    console.log(currentAllUsers);
+    window.location.href = './../index.html';
+
+}    
+    </script>
 </body>
+<!-- <a href="./../index.html"></a> -->
 </html>

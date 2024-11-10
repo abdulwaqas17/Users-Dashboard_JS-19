@@ -87,7 +87,7 @@
 /* styling for dashboardRight is here  */
 .dashboardRight {
 
-    width: 90%;
+    width: 85%;
     height: 100vh;
     background-color: rgb(252, 252, 252);
     margin-left:15% ;
@@ -229,14 +229,14 @@
 
 .dashboardRightData table tr {
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+    border-bottom: 1px solid rgba(95, 42, 42, 0.219);
 
 }
 
-.dashboardRightData table tr:hover {
+/* .dashboardRightData table tr:hover {
 
     background-color: rgb(248, 248, 248);
-}
+} */
 
 .Tableheadings {
 
@@ -244,4 +244,11 @@
     color: black;
     font-weight: bold;
     /* border-bottom: 1px solid black; */
+}
+
+#deleteUser {
+
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
 }

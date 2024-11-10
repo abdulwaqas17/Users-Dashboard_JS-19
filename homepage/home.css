@@ -84,9 +84,10 @@
 /* styling for dashboardRight is here  */
 .dashboardRight {
 
-    width: 90%;
+    width: 85%;
     height: 100vh;
     background-color: rgb(252, 252, 252);
+    
     
 }
 

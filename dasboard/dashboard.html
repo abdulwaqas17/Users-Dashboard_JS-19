@@ -20,22 +20,25 @@
 
             </div>
 
+            <!-- <a href="./../homepage/home.html"></a> -->
             <!-- links is here  -->
             <div class="links">
 
+
                 <ul>
                     
-                    <li onclick="showDashboard()"><a href="#">Dashboard</a></li>
+                    <li onclick="showHome()"><a href="javascript:void(0)">Home</a></li>
 
-                    <li onclick="showProfile()"><a href="#">Profile</a></li>
+                    <li onclick="showDashboard()"><a href="javascript:void(0)" >Dashboard</a></li>
 
-                    <li><a href="#">All Users</a></li>
+                    <li  onclick="showProfile()"><a href="javascript:void(0)">Profile</a></li>
 
-                    <li><a href="#">Admins</a></li>
+                    <li onclick="showServices()"><a href="#">Services</a></li>
 
-                    <li><a href="#">Managers</a></li>
+                    <li onclick="showAbout()"><a href="#">About Us</a></li>
 
-                    <li><a href="#">Employes</a></li>
+                    <li onclick="showContact()"><a href="#">Contact Us</a></li>
+
 
                 </ul>
 
@@ -67,7 +70,7 @@
 
                         </div>
 
-                        <button class="dashboardRightHeaderAddBtn">
+                        <button class="dashboardRightHeaderAddBtn" onclick="againSignUp()">
 
                             ADD USERS
 
@@ -113,7 +116,7 @@
                             <td>User Name</td>
                             <td>User Email</td>
                             <td>User City</td>
-                            <td>User Type</td>
+                            <td colspan="2">User Type</td>
 
                         </tr>
 
@@ -251,6 +254,8 @@
                     <td>${currentAllUsers[j].userEmail}</td>
                     <td>${currentAllUsers[j].userCity}</td>
                     <td>${currentAllUsers[j].userRole}</td>
+                    <td id='deleteUser'>D</td>
+                    
 
                 </tr> 
                 `
@@ -304,6 +309,15 @@
                 }
             }
         }
+
+        var deleteUser = document.getElementById('trForUsers');
+        deleteUser.addEventListener('click', function(e){
+
+            console.log(e);
+            
+        });
+    
+        console.dir(trForUsers);
 
 
     </script>

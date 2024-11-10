@@ -147,6 +147,15 @@ function againLogin() {
 
 }
 
+// for rander back to home page 
+function showHome() {
+
+    // rander back to sign up page
+    document.location.href = './../homepage/home.html';
+    // return false;
+
+}
+
 
 // match the data to local storage and go to homepage 
 function loginMatchData() {
@@ -211,165 +220,165 @@ function showProfile() {
 
     window.location.href = './../profile/profile.html';
 
-    document.querySelector('.dashboardRight').innerHTML = `   
+//     document.querySelector('.dashboardRight').innerHTML = `   
     
-<div class="dashboardRightContainer">
+// <div class="dashboardRightContainer">
 
-    <!-- dashboardRightHeader is here  -->
-    <div class="dashboardRightHeader">
+//     <!-- dashboardRightHeader is here  -->
+//     <div class="dashboardRightHeader">
 
         
-        <div class="dashboardRightHeaderNav flex">
+//         <div class="dashboardRightHeaderNav flex">
 
-            <!-- dashboardRightHeaderHeading is here  -->
-            <h2 class="dashboardRightHeaderHeading">Profile</h2>
+//             <!-- dashboardRightHeaderHeading is here  -->
+//             <h2 class="dashboardRightHeaderHeading">Profile</h2>
 
-            <!-- dashboardRightHeaderRightSide is here  -->
-             <div class="dashboardRightHeaderRightSide flex">
+//             <!-- dashboardRightHeaderRightSide is here  -->
+//              <div class="dashboardRightHeaderRightSide flex">
 
-                <div class="dashboardRightHeaderSearch flex">
+//                 <div class="dashboardRightHeaderSearch flex">
 
-                    <span>@</span>
-                    <input type="text" placeholder="Search">
+//                     <span>@</span>
+//                     <input type="text" placeholder="Search">
 
-                </div>
+//                 </div>
 
-                <button class="dashboardRightHeaderAddBtn">
+//                 <button class="dashboardRightHeaderAddBtn">
 
-                    ADD USERS
+//                     ADD USERS
 
-                </button>
+//                 </button>
 
-                <button class="dashboardRightHeaderInOf flex">
+//                 <button class="dashboardRightHeaderInOf flex">
 
-                    <span> • • • </span>
+//                     <span> • • • </span>
 
-                </button>
-
-
-
-             </div>
-        </div>
-
-            <!-- dashboardRightHeaderUsers is here  -->
-        <!-- <div class="dashboardRightHeaderUsers">
-
-                <ul class="flex">
-
-                    <li><a href="#">All Users 235</a></li>
-
-                    <li><a href="#">Admins 35</a></li>
-
-                    <li><a href="#">Managers 50</a></li>
-
-                    <li><a href="#">Employes 150</a></li>
-
-                </ul>
-        </div> -->
+//                 </button>
 
 
-    </div>
+
+//              </div>
+//         </div>
+
+//             <!-- dashboardRightHeaderUsers is here  -->
+//         <!-- <div class="dashboardRightHeaderUsers">
+
+//                 <ul class="flex">
+
+//                     <li><a href="#">All Users 235</a></li>
+
+//                     <li><a href="#">Admins 35</a></li>
+
+//                     <li><a href="#">Managers 50</a></li>
+
+//                     <li><a href="#">Employes 150</a></li>
+
+//                 </ul>
+//         </div> -->
 
 
-    <!-- profileSection is here  -->
-    <div class="profileSection">
+//     </div>
 
 
-        <!-- profileTop is here  -->
-        <div class="profileTop flex">
+//     <!-- profileSection is here  -->
+//     <div class="profileSection">
 
-            <!-- profilePhoto is here  -->
-            <div class="profilePhoto"></div>
 
-            <!-- profileName is here  -->
-            <div class="profileName">
+//         <!-- profileTop is here  -->
+//         <div class="profileTop flex">
 
-                <h2>Muhammad Waqas</h2>
-                <p>waqas123@gmail.com</p>
-                <p>Admin</p>
+//             <!-- profilePhoto is here  -->
+//             <div class="profilePhoto"></div>
+
+//             <!-- profileName is here  -->
+//             <div class="profileName">
+
+//                 <h2>Muhammad Waqas</h2>
+//                 <p>waqas123@gmail.com</p>
+//                 <p>Admin</p>
 
                 
-            <button class="editButton">
-                <span>#</span> Edit
-            </button>
+//             <button class="editButton">
+//                 <span>#</span> Edit
+//             </button>
 
-            </div>
+//             </div>
 
-        </div>
+//         </div>
 
-        <!-- profileMid is here  -->
-        <div class="profileMid">
+//         <!-- profileMid is here  -->
+//         <div class="profileMid">
 
-            <h2>Personal Information</h2>
-            <button class="editButton">
-                <span>#</span> Edit
-            </button>
+//             <h2>Personal Information</h2>
+//             <button class="editButton">
+//                 <span>#</span> Edit
+//             </button>
 
-            <table>
+//             <table>
 
-                <tr>
+//                 <tr>
                     
-                    <td>User Name</td>
-                    <td>Muhammad Waqas</td>
+//                     <td>User Name</td>
+//                     <td>Muhammad Waqas</td>
 
-                </tr>
+//                 </tr>
 
-                <tr>
+//                 <tr>
 
-                    <td>User Email</td>
-                    <td>Waqas123@gmail.com</td>
+//                     <td>User Email</td>
+//                     <td>Waqas123@gmail.com</td>
 
-                </tr>
+//                 </tr>
 
-                <tr>
+//                 <tr>
 
-                    <td>User Birth Day</td>
-                    <td>11 July 1996</td>
+//                     <td>User Birth Day</td>
+//                     <td>11 July 1996</td>
 
-                </tr>
+//                 </tr>
 
-                <tr>
+//                 <tr>
 
-                    <td>User Phone No.</td>
-                    <td>+920132466482</td>
+//                     <td>User Phone No.</td>
+//                     <td>+920132466482</td>
 
-                </tr>
+//                 </tr>
 
-            </table>
+//             </table>
 
-        </div>
+//         </div>
 
-        <!-- profileBottom is here  -->
-        <div class="profileBottom">
+//         <!-- profileBottom is here  -->
+//         <div class="profileBottom">
 
-            <h2>Address </h2>
-            <button class="editButton">
-                <span>#</span> Edit
-            </button>
+//             <h2>Address </h2>
+//             <button class="editButton">
+//                 <span>#</span> Edit
+//             </button>
 
-            <table>
+//             <table>
 
-                <tr>
+//                 <tr>
 
-                    <td>Country</td>
-                    <td>Pakistan</td>
+//                     <td>Country</td>
+//                     <td>Pakistan</td>
                     
-                </tr>
+//                 </tr>
 
-                <tr>
+//                 <tr>
 
-                    <td>City</td>
-                    <td>Karachi</td>
+//                     <td>City</td>
+//                     <td>Karachi</td>
 
-                </tr>
+//                 </tr>
 
-            </table>
+//             </table>
 
-        </div>
+//         </div>
 
-    </div>
+//     </div>
 
-</div>`
+// </div>`
  
     // document.getElementById('profileLi').classList.add('liStyle');
     // document.getElementById('dashboardLi').classList.remove('liStyle');

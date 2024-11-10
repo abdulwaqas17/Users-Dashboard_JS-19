@@ -82,7 +82,7 @@
 /* styling for dashboardRight is here  */
 .dashboardRight {
 
-    width: 90%;
+    width: 85%;
     height: 100vh;
     background-color: rgb(252, 252, 252);
     
@@ -136,7 +136,7 @@
     border-radius: 15px;
     background-color: red;
     color: white;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     border: none;
     padding-inline: 15px;
 
