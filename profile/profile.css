@@ -287,9 +287,8 @@ td input {
     width: 280px;
 }
 
-
 .none {
 
-    background-color: var(--color2);
-    
+    display: none;
+
 }

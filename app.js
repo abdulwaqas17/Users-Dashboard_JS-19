@@ -611,55 +611,55 @@ var profile = document.getElementById('profile');
 
 
 
-home.addEventListener('click', ()=> {
+// home.addEventListener('click', ()=> {
 
-    home.classList.add('none')
-    contact.classList.remove('none') 
-    services.classList.remove('none')
-    dashboard.classList.remove('none')
-    profile.classList.remove('none')
+//     home.classList.add('none')
+//     contact.classList.remove('none') 
+//     services.classList.remove('none')
+//     dashboard.classList.remove('none')
+//     profile.classList.remove('none')
 
-});
+// });
 
-services.addEventListener('click', ()=> {
+// services.addEventListener('click', ()=> {
 
-    services.classList.add('none')
-    contact.classList.remove('none') 
-    home.classList.remove('none')
-    dashboard.classList.remove('none')
-    profile.classList.remove('none')
+//     services.classList.add('none')
+//     contact.classList.remove('none') 
+//     home.classList.remove('none')
+//     dashboard.classList.remove('none')
+//     profile.classList.remove('none')
 
-});
+// });
 
-contact.addEventListener('click', ()=> {
+// contact.addEventListener('click', ()=> {
 
-    contact.classList.add('none')
-    services.classList.remove('none') 
-    home.classList.remove('none')
-    dashboard.classList.remove('none')
-    profile.classList.remove('none')
+//     contact.classList.add('none')
+//     services.classList.remove('none') 
+//     home.classList.remove('none')
+//     dashboard.classList.remove('none')
+//     profile.classList.remove('none')
 
-});
+// });
 
-profile.addEventListener('click', ()=> {
+// profile.addEventListener('click', ()=> {
 
-    profile.classList.add('none')
-    services.classList.remove('none') 
-    home.classList.remove('none')
-    dashboard.classList.remove('none')
-    contact.classList.remove('none')
+//     profile.classList.add('none')
+//     services.classList.remove('none') 
+//     home.classList.remove('none')
+//     dashboard.classList.remove('none')
+//     contact.classList.remove('none')
 
-});
+// });
 
-dashboard.addEventListener('click', ()=> {
+// dashboard.addEventListener('click', ()=> {
 
-    dashboard.classList.add('none')
-    services.classList.remove('none') 
-    home.classList.remove('none')
-    profile.classList.remove('none')
-    contact.classList.remove('none')
+//     dashboard.classList.add('none')
+//     services.classList.remove('none') 
+//     home.classList.remove('none')
+//     profile.classList.remove('none')
+//     contact.classList.remove('none')
 
-});
+// });
 
 
 // var lis = document.querySelectorAll('li');
