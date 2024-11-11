@@ -79,6 +79,30 @@ function signupDataStore() {
             
             if (userIs == 'new') {
 
+
+                var totalAdmin = parseInt(window.localStorage.getItem('totalAdmin')) || 0;
+                var totalManager = parseInt(window.localStorage.getItem('totalManager')) || 0;
+                var totalEmployee = parseInt(window.localStorage.getItem('totalEmployee')) || 0;
+
+                if (usersData.userRole == 'Admin') {
+
+                    totalAdmin = totalAdmin + 1;
+                    console.log(totalAdmin);
+                    window.localStorage.setItem('totalAdmin',totalAdmin);
+
+                } else if (usersData.userRole == 'Manager') {
+
+                    totalManager = totalManager + 1;
+                    window.localStorage.setItem('totalManager',totalManager);
+
+                }
+                 else if (usersData.userRole == 'Employee') {
+
+                    totalEmployee = totalEmployee + 1;
+                    window.localStorage.setItem('totalEmployee',totalEmployee);
+
+                }
+
                  // push an obj in the users array 
                  users.push(usersData);
                  console.log(users);         
@@ -94,6 +118,29 @@ function signupDataStore() {
 
 
         } else { //if user is first
+
+            
+            var totalAdmin = parseInt(window.localStorage.getItem('totalAdmin')) || 0;
+            var totalManager = parseInt(window.localStorage.getItem('totalManager')) || 0;
+            var totalEmployee = parseInt(window.localStorage.getItem('totalEmployee')) || 0;
+
+            if (usersData.userRole == 'Admin') {
+
+                totalAdmin = totalAdmin + 1;
+                window.localStorage.setItem('totalAdmin',totalAdmin);
+
+            } else if (usersData.userRole == 'Manager') {
+
+                totalManager = totalManager + 1;
+                window.localStorage.setItem('totalManager',totalManager);
+
+            }
+             else if (usersData.userRole == 'Employee') {
+
+                totalEmployee = totalEmployee + 1;
+                window.localStorage.setItem('totalEmployee',totalEmployee);
+
+            }
 
             users.push(usersData);
             console.log(users);         
@@ -151,8 +198,14 @@ function againLogin() {
 function showHome() {
 
     // rander back to sign up page
-    document.location.href = './../homepage/home.html';
-    // return false;
+     document.location.href = './../homepage/home.html';
+    //  home.style.backgroundColor = 'red';
+    //  about.style.backgroundColor = '';
+    //  contact.style.backgroundColor = '';
+    //  services.style.backgroundColor = '';
+    //  dashboard.style.backgroundColor = '';
+    //  profile.style.backgroundColor = '';
+    
 
 }
 
@@ -549,7 +602,81 @@ function showDashboard() {
 
 }
 
+var home = document.getElementById('home');
+var about = document.getElementById('about');
+var services = document.getElementById('services');
+var contact = document.getElementById('contact');
+var dashboard = document.getElementById('dashboard');
+var profile = document.getElementById('profile');
 
+
+
+home.addEventListener('click', ()=> {
+
+    home.classList.add('none')
+    contact.classList.remove('none') 
+    services.classList.remove('none')
+    dashboard.classList.remove('none')
+    profile.classList.remove('none')
+
+});
+
+services.addEventListener('click', ()=> {
+
+    services.classList.add('none')
+    contact.classList.remove('none') 
+    home.classList.remove('none')
+    dashboard.classList.remove('none')
+    profile.classList.remove('none')
+
+});
+
+contact.addEventListener('click', ()=> {
+
+    contact.classList.add('none')
+    services.classList.remove('none') 
+    home.classList.remove('none')
+    dashboard.classList.remove('none')
+    profile.classList.remove('none')
+
+});
+
+profile.addEventListener('click', ()=> {
+
+    profile.classList.add('none')
+    services.classList.remove('none') 
+    home.classList.remove('none')
+    dashboard.classList.remove('none')
+    contact.classList.remove('none')
+
+});
+
+dashboard.addEventListener('click', ()=> {
+
+    dashboard.classList.add('none')
+    services.classList.remove('none') 
+    home.classList.remove('none')
+    profile.classList.remove('none')
+    contact.classList.remove('none')
+
+});
+
+
+// var lis = document.querySelectorAll('li');
+
+// lis.forEach( (li) => {
+    
+//     li.addEventListener('click', () => {
+
+//         lis.forEach( (li) => 
+//             li.style.backgroundColor = ''
+//         );
+
+//         li.style.backgroundColor = 'red';
+
+//     });
+
+// });
 
 
 

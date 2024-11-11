@@ -6,7 +6,7 @@
     <title>Document</title>
 
     <style>
-        .green {
+        /* .green {
 
             color: green;
             
@@ -16,12 +16,65 @@
 
             color: red;
 
-        }
+        } */
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #0033cc, #66ccff);
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0044cc;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0022aa;
+}
+
     </style>
 </head>
 <body>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Tech Innovations</h1>
+            <p>We're revolutionizing the future of technology</p>
+            <button>Explore More</button>
+        </div>
+    </section>
+
     
-    <h1 class="red green" onclick="my()">
+    <!-- <h1 class="red green" onclick="my()">
         helllo world !
     </h1>
 
@@ -29,7 +82,7 @@
 
     <button onclick="a()">Click 1</button>
 
-    <button onclick="b()">Click 2</button>
+    <button onclick="b()">Click 2</button> -->
 
 </body>
 

@@ -10,13 +10,6 @@
 
 
 /* root classes  */
-/* :root {
-
-    --color1 : rgb(60,74,85);
-    --color2 : rgb(35,48,59);
-    --color3 : rgb(152,160,163);
-} */
-
 :root {
 
     --color1 : #000a97;
@@ -100,24 +93,18 @@
 
 /* .dashboardRightContainer {
 
-    padding: 40px;
+    margin: 40px;
 
-} */
+}  */
 
-/* body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    background-color: #f0f0f0;
-} */
-
-.hero {
+.contact-hero {
+    padding: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(to bottom, #0033cc, #66ccff);
+    background-image: linear-gradient(to bottom, #0044cc, #66ccff);
     color: #fff;
 }
 
@@ -130,10 +117,25 @@ h1 {
     margin-bottom: 20px;
 }
 
-p {
-    font-size: 24px;
-    margin-bottom: 40px;
+.contact-form {
+    background-color: #0022aa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
 button {
     padding: 15px 30px;
     font-size: 18px;
@@ -144,8 +146,27 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0022aa;
+.subscription {
+    margin-top: 40px;
+}
+
+.subscription h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* .company-logo {
+    margin-top: 40px;
+} */
+
+.company-logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.company-logo p {
+    font-size: 14px;
+    color: #ffffff;
 }
 
 

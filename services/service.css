@@ -15,6 +15,8 @@
     --color1 : rgb(60,74,85);
     --color2 : rgb(35,48,59);
     --color3 : rgb(152,160,163);
+
+    
 } */
 
 :root {
@@ -97,55 +99,45 @@
     
     
 }
-
-/* .dashboardRightContainer {
-
-    padding: 40px;
-
-} */
-
-/* body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    background-color: #f0f0f0;
-} */
-
-.hero {
+.about-hero {
+    
     display: flex;
+    
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(to bottom, #0033cc, #66ccff);
+    background-image: linear-gradient(to bottom, #0044cc, #66ccff);
     color: #fff;
 }
 
-.container {
+.about-hero h1 {
+
     text-align: center;
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
 }
 
-h1 {
-    font-size: 48px;
+.box {
+    background-color: #0022aa;
+    padding: 30px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.box h2 {
+    font-size: 24px;
     margin-bottom: 20px;
 }
-
-p {
-    font-size: 24px;
-    margin-bottom: 40px;
-}
-button {
-    padding: 15px 30px;
+.box p {
     font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    background-color: #0044cc;
-    color: #fff;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0022aa;
 }
 
 

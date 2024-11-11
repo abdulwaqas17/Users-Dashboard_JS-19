@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="profile.css">
 </head>
 <body>
@@ -18,27 +19,26 @@
             <!-- company logo is here  -->
             <div class="logo">
 
-                <h2>Tech.co</h2>
+                <h2>Tech Inn</h2>
 
             </div>
 
             <!-- links is here  -->
             <div class="links">
 
-             
+                
                 <ul>
                     
-                    <li onclick="showHome()"><a href="javascript:void(0)">Home</a></li>
+                    <li onclick="showHome()" id="home"><a href="javascript:void(0)">Home</a></li>
 
-                    <li onclick="showDashboard()"><a href="javascript:void(0)" >Dashboard</a></li>
+                    <li onclick="showDashboard()" id="dashboard"><a href="javascript:void(0)" >Dashboard</a></li>
 
-                    <li  onclick="showProfile()"><a href="javascript:void(0)">Profile</a></li>
+                    <li  onclick="showProfile()" id="profile"><a href="javascript:void(0)">Profile</a></li>
 
-                    <li onclick="showServices()"><a href="#">Services</a></li>
+                    <li onclick="showServices()" id="services"><a href="./../services/service.html">Services</a></li>
 
-                    <li onclick="showAbout()"><a href="#">About Us</a></li>
 
-                    <li onclick="showContact()"><a href="#">Contact Us</a></li>
+                    <li onclick="showContact()" id="contact"><a href="./../contact/contact.html">Contact Us</a></li>
 
 
                 </ul>
@@ -122,13 +122,13 @@
                         <!-- profileName is here  -->
                         <div class="profileName">
 
-                            <h2 id="h2UserName">Muhammad Waqas</h2>
+                            <h3 id="h2UserName">Muhammad Waqas</h3>
                             <p id="pUserEmail">waqas123@gmail.com</p>
                             <p id="pUserRole">Admin</p>
 
                             
                         <button class="saveButton none" onclick="saveData()">
-                            <span>#</span> Save Changes
+                             Save Changes
                         </button>
 
                         </div>
@@ -140,7 +140,7 @@
 
                         <h2>Personal Information</h2>
                         <button class="editButton" onclick="editData()">
-                            <span>#</span> Edit
+                            <span><i class="fa-solid fa-pen"></i></span> Edit
                         </button>
 
                         <table id="personalInformation">
@@ -182,7 +182,7 @@
 
                         <h2>Address </h2>
                         <button class="editButton" onclick="editData()">
-                            <span>#</span> Edit
+                            <span><i class="fa-solid fa-pen"></i></span> Edit
                         </button>
 
                         <table id="userAddress">

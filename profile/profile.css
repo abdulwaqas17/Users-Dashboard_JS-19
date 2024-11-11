@@ -10,11 +10,18 @@
 
 
 /* root classes  */
-:root {
+/* :root {
 
     --color1 : rgb(60,74,85);
     --color2 : rgb(35,48,59);
     --color3 : rgb(152,160,163);
+} */
+
+:root {
+
+    --color1 : #000a97;
+    --color2 :  #66ccff;
+    --color3 : rgb(255, 255, 255);
 }
 /* utility classes  */
 .flex {
@@ -102,6 +109,14 @@
 .dashboardRightHeaderNav {
 
     justify-content: space-between;
+
+}
+
+.dashboardRightHeaderNav h2 {
+
+   color: var(--color1);
+   font-size: 2rem;
+   /* padding-bottom: 10px; */
 
 }
 
@@ -202,6 +217,11 @@
 
 }
 
+.profileSection h2 {
+
+    color: var(--color1);
+}
+
 .editButton,.saveButton {
 
     position: absolute;
@@ -223,10 +243,14 @@
 
 .profilePhoto {
 
-    width: 100px;
-    height: 100px;
+    width: 115px;
+    height: 115px;
     border-radius: 50%;
-    background-color: gray;
+    box-shadow: 0px 0px 1px 2px rgb(15, 15, 15);
+    /* background-color: gray; */
+    background-image: url(https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg);
+    background-size: cover;
+    background-position: center;
 
 }
 
@@ -263,8 +287,9 @@ td input {
     width: 280px;
 }
 
+
 .none {
 
-    display: none;
-
+    background-color: var(--color2);
+    
 }
