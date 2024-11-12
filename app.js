@@ -227,41 +227,53 @@ function loginMatchData() {
     var parseUsers = JSON.parse(getUsersStr);
     console.log(parseUsers);
 
+    // if local Storage m kuch nhe, means ap ne signup hi nhe kia
+    if(!parseUsers) {
 
+        alert('You are not Sign up!');
+        // back to sign up pageXOffset, sign up FIRST 
+        window.location.href =  './../index.html';
+
+    } else {
+       
     // condition to check if data match, then go to homegape, other wise You write wrong data in login 
-        for ( var i = 0; i < parseUsers.length; i++) {
+      for ( var i = 0; i < parseUsers.length; i++) {
 
-            // declare isUser for prevent Multiple times answer
-            var isUser;
+        // declare isUser for prevent Multiple times answer
+        var isUser;
 
-            // if userLoginData match with any userData so assign 'match' in isUser 
-            if (
+        // if userLoginData match with any userData so assign 'match' in isUser 
+        if (
 
-                userLoginEmail == parseUsers[i].userEmail &&
-                userLoginPassword == parseUsers[i].userPassword
-                
-            ) {
+            userLoginEmail == parseUsers[i].userEmail &&
+            userLoginPassword == parseUsers[i].userPassword
+            
+        ) {
 
-               isUser = 'match'; 
-               window.localStorage.setItem('lastLoginUserEmail',userLoginEmail);
-               alert('Login Successfully, Go to Homepage');
-               window.location.href = './../homepage/home.html';
-               break;
+           isUser = 'match'; 
+           window.localStorage.setItem('lastLoginUserEmail',userLoginEmail);
+           alert('Login Successfully, Go to Homepage');
+           window.location.href = './../homepage/home.html';
+           break;
 
-            } else {
+        } else {
 
-                isUser = 'not match'
-                // alert('Incorrect Name , Email or Password');
-
-            }
-
-        } 
-
-        if (isUser == 'not match') {
-
-            alert('Incorrect Name , Email or Password');
+            isUser = 'not match'
+            // alert('Incorrect Name , Email or Password');
 
         }
+
+      } 
+
+      if (isUser == 'not match') {
+
+        alert('Incorrect Name , Email or Password');
+
+      }
+
+    }
+
+
 
        
 }

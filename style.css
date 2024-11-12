@@ -11,6 +11,29 @@
 
 }
 
+/* root classes  */
+/* :root {
+
+    --color1 : rgb(60,74,85);
+    --color2 : rgb(35,48,59);
+    --color3 : rgb(152,160,163);
+} */
+
+
+/* UTILITY CLASSES  */
+:root {
+
+    --color1 : #000a97;
+    --color2 :  #66ccff;
+    --color3 : rgb(255, 255, 255);
+}
+
+
+.flex {
+
+    display: flex;
+
+}
 
 /* ----------FOR FORMS --------- */
 
@@ -92,7 +115,7 @@
 
 }
 
-.button{
+.LoginSignupButton{
 
     border: none;
 
@@ -129,11 +152,673 @@
 }
 /* Hover State of Submit */
 
-.button:hover{
+.LoginSignupButton:hover{
 
     background-color: #206796;
     
 }
+
+
+
+
+
+
+
+
+
+
+/* ------- HOME PAGE CSS ------  */
+.dashboard{
+
+    height: 100vh;
+
+}
+
+
+/* styling for dashboardLeft is here  */
+.dashboardLeft {
+
+    width: 15%;
+    height: 100vh;
+    background-color: var(--color1);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    
+}
+
+.logo h2{
+
+    padding: 30px 0px 20px 20px;
+    color: white;
+
+}
+
+.links li {
+
+    padding: 15px 20px;
+    /* margin-bottom: 3px; */
+    /* border: 2px solid rgba(157, 227, 255, 0.144); */
+    box-shadow: -1.5px 0px 2px 0px rgba(9, 136, 255, 0.582);
+    /* border-top: 1px solid rgba(157, 227, 255, 0.315); */
+
+}
+
+.links a{
+
+    text-decoration: none;
+    color: var(--color3);
+
+}
+
+
+.links li:hover {
+
+    background-color: var(--color2);
+    
+}
+
+.links li:hover a {
+
+    color: white;
+    
+}
+
+
+
+/* styling for dashboardRight is here  */
+.dashboardRight {
+
+    width: 85%;
+    height: 100vh;
+    background-color: rgb(252, 252, 252);
+    margin-left:15% ;
+    /* padding: 40px; */
+    
+}
+
+.dashboardRightContainer,.profileRightContainer {
+
+    padding: 40px;
+
+}
+
+/* HERO SECTION OF HOME PAGE  */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #0033cc, #66ccff);
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.homeButton {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0044cc;
+    color: #fff;
+    cursor: pointer;
+}
+
+.homeButton:hover {
+    background-color: #0022aa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------- DASHBOARD PAGE CSS ------  */
+.dashboardRightHeaderNav {
+
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.dashboardRightHeaderNav h2{
+
+    color: var(--color1);
+    font-size: 2rem;
+    padding-bottom: 10px;
+
+}
+
+.dashboardRightHeaderRightSide {
+
+    gap: 10px;
+
+}
+
+.dashboardRightHeaderSearch {
+
+    border-radius: 15px;
+    border: 1px solid gray;
+    align-items: center;
+    background-color: white;
+
+}
+
+.dashboardRightHeaderSearch span {
+
+    padding-inline: 10px;
+
+}
+
+.dashboardRightHeaderSearch input {
+
+    border: none;
+    outline: none;
+    background: none;
+    padding-block: 8px;
+
+}
+
+.dashboardRightHeaderAddBtn , .profileTopButton {
+
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: var(--color2);
+    /* border: 1px solid var(--color1); */
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+    padding-inline: 15px;
+
+}
+
+.dashboardRightHeaderAddBtn:hover {
+
+    background-color: var(--color1);
+}
+
+.profileTopButton:hover {
+
+    background-color: var(--color1);
+}
+
+.profileTopButton {
+
+    font-size: 1rem;
+    
+}
+.dashboardRightHeaderInOf {
+
+    cursor: pointer;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: 1px solid black;
+    font-weight: bold;
+    color: black;
+    font-size: 0.9rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.dashboardRightHeaderUsers {
+
+    margin-block: 20px 25px;
+
+}
+
+.dashboardRightHeaderUsers ul {
+
+    list-style: none;
+    gap: 60px;
+    
+
+}
+
+.dashboardRightHeaderUsers ul a {
+
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+
+}
+
+.dashboardRightHeaderUsers ul a:hover {
+
+    color: red;
+
+}
+
+
+
+
+/* dashboardRightData is here  */
+.dashboardRightData {
+
+    background-color: white;
+    /* padding: 10px; */
+    border-radius: 3px;
+    box-shadow: 0px 0px 1px 0px gray;
+
+}
+
+.dashboardRightData table {
+
+    width: 100%;
+    
+}
+
+.dashboardRightData table, .dashboardRightData td {
+
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    font-size: 0.9rem;
+
+}
+
+
+.dashboardRightData table td {
+
+    padding-block: 15px;
+    padding-left: 8px;
+    color: rgb(82, 82, 82);
+    /* border-bottom: 1px solid black; */
+
+}
+
+.dashboardRightData table tr {
+
+    border-bottom: 1px solid rgba(2, 0, 105, 0.219);
+
+}
+
+/* .dashboardRightData table tr:hover {
+
+    background-color: rgb(248, 248, 248);
+} */
+
+.Tableheadings {
+
+    background-color: rgb(10, 0, 155);
+    /* color: rgb(255, 255, 255)!important; */
+    font-weight: bold;
+    /* border-bottom: 1px solid black; */
+}
+
+.Tableheadings td{
+
+    color: rgb(255, 255, 255)!important;
+
+}
+
+#trForUsers tr:nth-child(even) {
+
+    background-color: rgba(216, 255, 255, 0.164);
+}
+
+
+#deleteUser {
+
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------- PROFILE PAGE CSS ------  */
+.profileRightHeaderNav {
+
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.profileHeading{
+
+   color: var(--color1);
+   font-size: 2rem;
+   /* padding-bottom: 10px; */
+
+}
+
+.dashboardRightHeaderRightSide {
+
+    gap: 10px;
+
+}
+
+.dashboardRightHeaderSearch {
+
+    border-radius: 15px;
+    border: 1px solid gray;
+    align-items: center;
+    background-color: white;
+
+}
+
+.dashboardRightHeaderSearch span {
+
+    padding-inline: 10px;
+
+}
+
+.dashboardRightHeaderSearch input {
+
+    border: none;
+    outline: none;
+    background: none;
+    padding-block: 8px;
+
+}
+
+/* .profileTopButton {
+
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: var(--color2);
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+    padding-inline: 15px;
+
+} */
+
+.dashboardRightHeaderInOf {
+
+    cursor: pointer;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: 1px solid black;
+    font-weight: bold;
+    color: black;
+    font-size: 0.9rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.dashboardRightHeaderUsers {
+
+    margin-block: 20px 25px;
+
+}
+
+.dashboardRightHeaderUsers ul {
+
+    list-style: none;
+    gap: 60px;
+    
+
+}
+
+.dashboardRightHeaderUsers ul a {
+
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+
+}
+
+.dashboardRightHeaderUsers ul a:hover {
+
+    color: red;
+
+}
+
+
+
+/* styling for profileSection is here  */
+.profileSection>div {
+
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.178);
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-block: 15px;
+    position: relative;
+
+}
+
+.profileSection h2 {
+
+    color: var(--color1);
+}
+
+.editButton i {
+
+    padding-right: 5px;
+    font-size: 0.8rem;
+
+}
+
+.editButton,.saveButton {
+
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color1);
+    color: white;
+
+}
+
+.profileTop {
+
+    align-items: center;
+    gap: 20px;
+
+}
+
+.profilePhoto {
+
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 2px rgb(15, 15, 15);
+    /* background-color: gray; */
+    background-image: url(https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.profileName h2+p {
+
+    padding-block: 10px;
+
+}
+
+.profileSection table {
+
+    margin-top: 10px;
+
+}
+
+.profileSection table td {
+
+    width: 250px;
+    /* border: 1px solid black; */
+    padding-block: 5px;
+
+}
+
+#pUserEmail {
+
+    padding-block: 4px;
+}
+td input {
+
+    border : 1px solid gray;
+    border-radius: 5px;
+    background: none;
+    outline: none;
+    padding: 7px;
+    font-size: 1rem;
+    width: 280px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------- SERVICE PAGE CSS ------  */
+.about-hero {
+    
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #0044cc, #66ccff);
+    color: #fff;
+}
+
+.about-hero h1 {
+
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.box {
+    background-color: #0022aa;
+    padding: 30px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.box p {
+    font-size: 18px;
+}
+
+
+
+
+
+
+/* --------- CONTACT PAGE CSS ------  */
+.contact-hero {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #0044cc, #66ccff);
+    color: #fff;
+}
+
+.contact-hero .container {
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.contact-hero .contact-form {
+    background-color: #0022aa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-hero form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-hero .personalInformation input{
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.contact-hero button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0044cc;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact-hero .subscription {
+    margin-top: 40px;
+}
+
+.contact-hero .subscription h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* .company-logo {
+    margin-top: 40px;
+} */
+
+.company-logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.company-logo p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
 
 
 
