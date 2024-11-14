@@ -1,129 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- <link rel="stylesheet" href="dashboard.css"> -->
-    <link rel="stylesheet" href="./../style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./../style.css" />
+  </head>
+  <body>
     <div class="dashboard flex">
+      <!-- for mobile navbar  -->
+      <div class="mobile-nav flex">
+        <h2>Tech Inn</h2>
+        <i class="fa-solid fa-bars toggle"></i>
+      </div>
 
-        <!-- dashboard left is here  -->
-        <div class="dashboardLeft">
-
-            <!-- company logo is here  -->
-            <div class="logo">
-
-                <h2>Tech.co</h2>
-
-            </div>
-
-            <!-- <a href="./../homepage/home.html"></a> -->
-            <!-- links is here  -->
-            <div class="links">
-
-
-                <ul>
-                    
-                    <li onclick="showHome()" id="home"><a href="javascript:void(0)">Home</a></li>
-
-                    <li onclick="showDashboard()" id="dashboard"><a href="javascript:void(0)" >Dashboard</a></li>
-
-                    <li  onclick="showProfile()" id="profile"><a href="javascript:void(0)">Profile</a></li>
-
-                    <li onclick="showServices()" id="services"><a href="./../services/service.html">Services</a></li>
-
-                    <li onclick="showContact()" id="contact"><a href="./../contact/contact.html">Contact Us</a></li>
-
-
-                </ul>
-
-            </div>
-
+      <!-- dashboard left is here  -->
+      <div class="leftBar">
+        <!-- company logo is here  -->
+        <div class="logo">
+          <h2>Tech.co</h2>
         </div>
 
-        <!-- dashboard Right is here  -->
-        <div class="dashboardRight">
+        <!-- <a href="./../homepage/home.html"></a> -->
+        <!-- links is here  -->
+        <div class="links">
+          <ul>
+            <li onclick="showHome()" id="home">
+              <a href="javascript:void(0)">Home</a>
+            </li>
 
-            <div class="dashboardRightContainer">
+            <li onclick="showDashboard()" id="dashboard">
+              <a href="javascript:void(0)">Dashboard</a>
+            </li>
 
-                <!-- dashboardRightHeader is here  -->
-                <div class="dashboardRightHeader">
+            <li onclick="showProfile()" id="profile">
+              <a href="javascript:void(0)">Profile</a>
+            </li>
 
+            <li onclick="showServices()" id="services">
+              <a href="./../services/service.html">Services</a>
+            </li>
 
-                    <div class="dashboardRightHeaderNav flex">
+            <li onclick="showContact()" id="contact">
+              <a href="./../contact/contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-                    <!-- dashboardRightHeaderHeading is here  -->
-                    <h2 class="dashboardRightHeaderHeading">USERS</h2>
+      <!-- dashboard Right is here  -->
+      <div class="dashboardRight DashboardR">
+        <div class="dashboardRightContainer">
+          <!-- dashboardRightHeader is here  -->
+          <div class="dashboardRightHeader">
+            <div class="dashboardRightHeaderNav flex">
+              <!-- dashboardRightHeaderHeading is here  -->
+              <h2 class="dashboardRightHeaderHeading">USERS</h2>
 
-                    <!-- dashboardRightHeaderRightSide is here  -->
-                    <div class="dashboardRightHeaderRightSide flex">
-
-                        <div class="dashboardRightHeaderSearch flex">
-
-                            <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                            <input type="text" placeholder="Search">
-
-                        </div>
-
-                        <button class="dashboardRightHeaderAddBtn" onclick="againSignUp()">
-
-                            ADD USERS
-
-                        </button>
-
-                        <button class="dashboardRightHeaderInOf flex">
-
-                            <span> • • • </span>
-
-                        </button>
-
-
-
-                    </div>
-                    </div>
-
-                    <!-- dashboardRightHeaderUsers is here  -->
-                    <div class="dashboardRightHeaderUsers">
-
-                        <ul class="flex">
-
-                            <li><a href="#" id="totalUsers">All Users 235</a></li>
-
-                            <li><a href="#"  id="totalAdmins">Admins 35</a></li>
-
-                            <li><a href="#"  id="totalManagers">Managers 50</a></li>
-
-                            <li><a href="#"  id="totalEmployees">Employees 150</a></li>
-
-                        </ul>
-                    </div>
-
+              <!-- dashboardRightHeaderRightSide is here  -->
+              <div class="dashboardRightHeaderRightSide flex">
+                <div class="dashboardRightHeaderSearch flex">
+                  <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                  <input type="text" placeholder="Search" />
                 </div>
 
-                <!-- dashboardRightData is here  -->
-                <div class="dashboardRightData">
+                <button
+                  class="dashboardRightHeaderAddBtn"
+                  onclick="againSignUp()"
+                >
+                  ADD USERS
+                </button>
 
-                    <table>
+                <button class="dashboardRightHeaderInOf flex">
+                  <span> • • • </span>
+                </button>
+              </div>
+            </div>
 
-                        <tr class="Tableheadings">
+            <!-- dashboardRightHeaderUsers is here  -->
+            <div class="dashboardRightHeaderUsers">
+              <ul class="flex">
+                <li><a href="#" id="totalUsers">All Users 235</a></li>
 
+                <li><a href="#" id="totalAdmins">Admins 35</a></li>
 
-                            <td>User Name</td>
-                            <td>User Email</td>
-                            <td>User City</td>
-                            <td colspan="2">User Type</td>
+                <li><a href="#" id="totalManagers">Managers 50</a></li>
 
-                        </tr>
+                <li><a href="#" id="totalEmployees">Employees 150</a></li>
+              </ul>
+            </div>
+          </div>
 
-                        <tbody id="trForUsers">
+          <!-- dashboardRightData is here  -->
+          <div class="dashboardRightData">
+            <table>
+              <tr class="Tableheadings">
+                <td>User Name</td>
+                <td>User Email</td>
+                <td>User City</td>
+                <td colspan="2">User Type</td>
+              </tr>
 
-                            
-                        <!-- <tr>
+              <tbody id="trForUsers">
+                <!-- <tr>
 
                             <td>Muhammad Waqas</td>
                             <td>waqas123@gmail.com</td>
@@ -194,83 +181,71 @@
                             <td>Admin</td>
 
                         </tr> -->
-
-                        </tbody>
-                    </table>
-                    
-                </div>
-
-            </div>
-
+              </tbody>
+            </table>
+          </div>
         </div>
-
+      </div>
     </div>
-    
-
 
     <script src="./../app.js"></script>
 
-    
     <script>
+      var totalAdmins = parseInt(window.localStorage.getItem("totalAdmin"));
+      var totalManagers = parseInt(window.localStorage.getItem("totalManager"));
+      var totalEmployees = parseInt(
+        window.localStorage.getItem("totalEmployee")
+      );
 
-        var totalAdmins = parseInt(window.localStorage.getItem('totalAdmin'));
-        var totalManagers = parseInt(window.localStorage.getItem('totalManager'));
-        var totalEmployees = parseInt(window.localStorage.getItem('totalEmployee'));
+      console.log(totalAdmins, totalManagers, totalEmployees);
 
-        console.log(totalAdmins,totalManagers,totalEmployees);
-
-        document.getElementById('totalUsers').innerHTML = `
+      document.getElementById("totalUsers").innerHTML = `
         
         Total Users ${totalAdmins + totalManagers + totalEmployees}`;
 
-        document.getElementById('totalAdmins').innerHTML = `
+      document.getElementById("totalAdmins").innerHTML = `
         
         Total Admins ${totalAdmins}`;
 
-        document.getElementById('totalManagers').innerHTML = `
+      document.getElementById("totalManagers").innerHTML = `
         
         Total Managers ${totalManagers}`;
 
-        document.getElementById('totalEmployees').innerHTML = `
+      document.getElementById("totalEmployees").innerHTML = `
         
         Total Employees ${totalEmployees}`;
 
-        // document.querySelector('.dashboardRightContainer').innerText = 'abc'
-        // document.getElementById('abcd').innerHTML = 'Hello';
+      // document.querySelector('.dashboardRightContainer').innerText = 'abc'
+      // document.getElementById('abcd').innerHTML = 'Hello';
 
-        // get tbody for inserting tr in it (storing the data)
-        var trForUsers = document.getElementById('trForUsers');
+      // get tbody for inserting tr in it (storing the data)
+      var trForUsers = document.getElementById("trForUsers");
 
-        // get login email of current user from local Storage  
-        var currentUserEmail = window.localStorage.getItem('lastLoginUserEmail'); 
-        console.log(currentUserEmail);
+      // get login email of current user from local Storage
+      var currentUserEmail = window.localStorage.getItem("lastLoginUserEmail");
+      console.log(currentUserEmail);
 
-        // get current all users from local Storage 
-        var currentAllUsers = JSON.parse(window.localStorage.getItem('Users'));
-        console.log(currentAllUsers);
+      // get current all users from local Storage
+      var currentAllUsers = JSON.parse(window.localStorage.getItem("Users"));
+      console.log(currentAllUsers);
 
-        // get the obj of current user through its UNIQUE email 
-        for (var i = 0; i < currentAllUsers.length; i++ ) {
-
-            if (currentUserEmail == currentAllUsers[i].userEmail) {
-
-                // current user data store in this variable 
-                var currentUserData = currentAllUsers[i];
-                console.log(currentUserData);
-                break;
-
-            }
+      // get the obj of current user through its UNIQUE email
+      for (var i = 0; i < currentAllUsers.length; i++) {
+        if (currentUserEmail == currentAllUsers[i].userEmail) {
+          // current user data store in this variable
+          var currentUserData = currentAllUsers[i];
+          console.log(currentUserData);
+          break;
         }
+      }
 
-        console.log(currentUserData);
-        // if current user is admin So,
-        if (currentUserData.userRole == 'Admin') {
-
-            // loop for accessing all user data through iteration
-            for (var j = 0; j < currentAllUsers.length; j++) {
-
-                // shows all the data to admin (No condition for admin )
-                trForUsers.innerHTML += `
+      console.log(currentUserData);
+      // if current user is admin So,
+      if (currentUserData.userRole == "Admin") {
+        // loop for accessing all user data through iteration
+        for (var j = 0; j < currentAllUsers.length; j++) {
+          // shows all the data to admin (No condition for admin )
+          trForUsers.innerHTML += `
                 <tr>
 
                     <td>${currentAllUsers[j].userName}</td>
@@ -281,19 +256,16 @@
                     
 
                 </tr> 
-                `
-            }
-
-        } 
-        // if current user is Manager 
-        else if (currentUserData.userRole == 'Manager') {
-
-            // loop for accessing all user data through iteration
-            for (var k = 0; k < currentAllUsers.length; k++) {
-
-                // for prevent to show Admin data to manager 
-               if (currentAllUsers[k].userRole !== 'Admin') {
-                trForUsers.innerHTML += `
+                `;
+        }
+      }
+      // if current user is Manager
+      else if (currentUserData.userRole == "Manager") {
+        // loop for accessing all user data through iteration
+        for (var k = 0; k < currentAllUsers.length; k++) {
+          // for prevent to show Admin data to manager
+          if (currentAllUsers[k].userRole !== "Admin") {
+            trForUsers.innerHTML += `
                 <tr>
 
                     <td>${currentAllUsers[k].userName}</td>
@@ -303,21 +275,17 @@
 
                 </tr>
                 
-                `
-               }
-            }
-
+                `;
+          }
         }
-        // if current user is Employee 
-        else if (currentUserData.userRole == 'Employee') {
-
-            // loop for accessing all user data through iteration
-            for (var l = 0; l < currentAllUsers.length; l++) {
-
-                // for to show only employee data 
-                if(currentAllUsers[l].userRole == 'Employee') {
-
-                    trForUsers.innerHTML += `
+      }
+      // if current user is Employee
+      else if (currentUserData.userRole == "Employee") {
+        // loop for accessing all user data through iteration
+        for (var l = 0; l < currentAllUsers.length; l++) {
+          // for to show only employee data
+          if (currentAllUsers[l].userRole == "Employee") {
+            trForUsers.innerHTML += `
                 <tr>
 
                     <td>${currentAllUsers[l].userName}</td>
@@ -327,80 +295,74 @@
 
                 </tr>
 
-                `
+                `;
+          }
+        }
+      }
 
-                }
-            }
+      // i write this but By mistake bottom line work perfectly
+      // var deleteUser = document.querySelectorAll('.deleteUser');
+
+      // get parent of tr for deleting the tr and its userObj
+      var deleteUser = document.getElementById("trForUsers");
+
+      // make a function for delete user
+      deleteUser.addEventListener("click", function (e) {
+        // console.log(e.target.previousElementSibling.previousElementSibling.previousElementSibling);
+
+        // get the email of desire users
+        var deleteUserEmail =
+          e.target.previousElementSibling.previousElementSibling
+            .previousElementSibling.childNodes[0].nodeValue;
+        // var deleteUserEmail = deletUsertd;
+        console.log(deleteUserEmail);
+
+        // get the allUsers form localStorage
+        var allUsers = JSON.parse(window.localStorage.getItem("Users"));
+        console.log(allUsers);
+
+        // loop for get desire obj
+        for (var i = 0; i < allUsers.length; i++) {
+          // check if the email match
+          if (deleteUserEmail == allUsers[i].userEmail) {
+            var deleteUserObj = allUsers[i];
+            // get the index no. of desire user for delete this
+            var deleteUserIndex = i;
+
+            console.log(deleteUserObj);
+            console.log(deleteUserIndex);
+            // break if the work is done
+            break;
+          }
         }
 
-        // i write this but By mistake bottom line work perfectly 
-        // var deleteUser = document.querySelectorAll('.deleteUser');
+        // delete the user from array through splice
+        if (deleteUserObj.userRole == "Admin") {
+          var minusAdmin = parseInt(window.localStorage.getItem("totalAdmin"));
+          minusAdmin = minusAdmin - 1;
+          window.localStorage.setItem("totalAdmin", minusAdmin);
+        } else if (deleteUserObj.userRole == "Manager") {
+          var minusManager = parseInt(
+            window.localStorage.getItem("totalManager")
+          );
+          minusManager = minusManager - 1;
+          window.localStorage.setItem("totalManager", minusManager);
+        } else if (deleteUserObj.userRole == "Employee") {
+          var minusEmployee = parseInt(
+            window.localStorage.getItem("totalEmployee")
+          );
+          minusEmployee = minusEmployee - 1;
+          window.localStorage.setItem("totalEmployee", minusEmployee);
+        }
 
-        // get parent of tr for deleting the tr and its userObj 
-        var deleteUser = document.getElementById('trForUsers');
+        allUsers.splice(deleteUserIndex, 1);
+        window.localStorage.setItem("Users", JSON.stringify(allUsers));
+        alert(
+          deleteUserObj.userName + " deleted successfully, Refreash the page"
+        );
+      });
 
-        // make a function for delete user 
-        deleteUser.addEventListener('click', function(e){
-
-            // console.log(e.target.previousElementSibling.previousElementSibling.previousElementSibling);
-
-            // get the email of desire users 
-            var deleteUserEmail = e.target.previousElementSibling.previousElementSibling.previousElementSibling.childNodes[0].nodeValue;
-            // var deleteUserEmail = deletUsertd;
-            console.log(deleteUserEmail);
-
-            // get the allUsers form localStorage 
-            var allUsers = JSON.parse(window.localStorage.getItem('Users'));
-            console.log(allUsers);
-
-            // loop for get desire obj 
-            for (var i = 0; i < allUsers.length; i++) {
-
-                // check if the email match 
-                if(deleteUserEmail == allUsers[i].userEmail) {
-
-                    var deleteUserObj = allUsers[i];
-                    // get the index no. of desire user for delete this 
-                    var deleteUserIndex = i;
-
-                    console.log(deleteUserObj);
-                    console.log(deleteUserIndex);
-                    // break if the work is done 
-                    break;
-
-                }
-            }
-
-            // delete the user from array through splice  
-            if (deleteUserObj.userRole == 'Admin') {
-
-                var minusAdmin = parseInt(window.localStorage.getItem('totalAdmin'));
-                minusAdmin = minusAdmin - 1;
-                window.localStorage.setItem('totalAdmin',minusAdmin)
-                
-            } else if (deleteUserObj.userRole == 'Manager') {
-
-                var minusManager = parseInt(window.localStorage.getItem('totalManager'));
-                minusManager = minusManager - 1;
-                window.localStorage.setItem('totalManager',minusManager);
-            }
-             else if (deleteUserObj.userRole =='Employee') {
-
-                var minusEmployee = parseInt(window.localStorage.getItem('totalEmployee'));
-                minusEmployee = minusEmployee - 1;
-                window.localStorage.setItem('totalEmployee',minusEmployee);
-            }
-
-            allUsers.splice(deleteUserIndex,1);
-            window.localStorage.setItem('Users',JSON.stringify(allUsers));
-            alert(deleteUserObj.userName + ' deleted successfully, Refreash the page')
-
-
-        });
-    
-        // console.dir(trForUsers);
-
-
+      // console.dir(trForUsers);
     </script>
-</body>
+  </body>
 </html>

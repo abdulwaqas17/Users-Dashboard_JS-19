@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  padding: 0;
 
-    padding: 0;
+  margin: 0;
 
-    margin: 0;
+  box-sizing: border-box;
 
-    box-sizing: border-box;
-
-    font-family:"Lato", sans-serif;
-
+  font-family: "Lato", sans-serif;
 }
 
 /* root classes  */
@@ -19,436 +17,364 @@
     --color3 : rgb(152,160,163);
 } */
 
-
 /* UTILITY CLASSES  */
 :root {
-
-    --color1 : #000a97;
-    --color2 :  #66ccff;
-    --color3 : rgb(255, 255, 255);
+  --color1: #000a97;
+  --color2: #66ccff;
+  --color3: rgb(255, 255, 255);
 }
 
-
 .flex {
-
-    display: flex;
-
+  display: flex;
 }
 
 /* ----------FOR FORMS --------- */
 
 /* Styling of Outer-box */
 
-.signup,.login{
-
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(250, 250, 250);
-    min-width: 410px;
+.signup,
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(250, 250, 250);
+  /* min-width: 410px; */
 
 }
 
 /* Styling of Inner-box */
 
-.inner-box{
-
-    width: 400px;
-    position: relative;
-    padding: 20px 50px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 8px 4px  #8b8b8b;
-    background-color: white;
-    backdrop-filter: blur(10px);
-    z-index: 2;
-
+.inner-box {
+  width: 400px;
+  position: relative;
+  padding: 20px 50px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px 4px #8b8b8b;
+  background-color: white;
+  backdrop-filter: blur(10px);
+  z-index: 2;
 }
 
-
-.signup-header h1{
-    font-size: 2.5rem;
-    color: #131010;
-    text-align: center;
+.signup-header h1 {
+  font-size: 2.5rem;
+  color: #131010;
+  text-align: center;
 }
 
-.signup-header p{
+.signup-header p {
+  font-size: 0.9rem;
 
-    font-size: 0.9rem;
+  color: #363636;
 
-    color: #363636;
-
-    font-weight: 600;
+  font-weight: 600;
 }
 
 /* Stylin of signup-body */
 
-.signup-body{
-
-    margin: 20px 0;
-
+.signup-body {
+  margin: 20px 0;
 }
 
-.signup-body .input{
-
-    margin: 10px 0;
-
+.signup-body .input {
+  margin: 10px 0;
 }
 
-.signup-body .input label{
-
-    display: block;
-    font-size: 1rem;
-    font-weight: 600;
-
+.signup-body .input label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.signup-body>form>.input>input , select{
-
-    width: 100%;
-    padding: 10px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-top: 5px;
-
+.signup-body > form > .input > input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 5px;
 }
 
-.LoginSignupButton{
+.LoginSignupButton {
+  border: none;
 
-    border: none;
+  background-color: #3498db;
 
-    background-color: #3498db;
+  color: white;
 
-    color: white;
+  cursor: pointer;
 
-    cursor: pointer;
+  width: 100%;
 
-    width: 100%;
+  padding: 10px;
 
-    padding: 10px;
+  border-radius: 5px;
 
-    border-radius: 5px;
+  font-size: 1rem;
 
-    font-size: 1rem;
-
-    margin-top: 5px;
-
+  margin-top: 5px;
 }
 
 .input p {
-
-    text-align: center;
-    color: rgb(82, 82, 82);
-
+  text-align: center;
+  color: rgb(82, 82, 82);
 }
 
 .input p a {
-
-    text-decoration: none;
-    color: rgb(0, 116, 248);
-    
+  text-decoration: none;
+  color: rgb(0, 116, 248);
 }
 /* Hover State of Submit */
 
-.LoginSignupButton:hover{
-
-    background-color: #206796;
-    
+.LoginSignupButton:hover {
+  background-color: #206796;
 }
-
-
-
-
-
-
-
-
-
 
 /* ------- HOME PAGE CSS ------  */
-.dashboard{
 
-    height: 100vh;
-
+/* for mobile navbar */
+.mobile-nav {
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(19, 0, 54);
+  padding-inline: 25px;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  z-index: 1000;
 }
 
+.mobile-nav i {
+    color: white;
+    font-size: 1.5rem;
+    /* width: 50px;
+    height: 30px; */
+}
+.dashboard,.profile {
+  height: 100vh;
+  position: relative;
+}
 
 /* styling for dashboardLeft is here  */
-.dashboardLeft {
-
-    width: 15%;
-    height: 100vh;
-    background-color: var(--color1);
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    
+.leftBar {
+  width: 15%;
+  height: 100vh;
+  background-color: var(--color1);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  
 }
 
-.logo h2{
-
-    padding: 30px 0px 20px 20px;
-    color: white;
-
+.logo h2 {
+  padding: 30px 0px 20px 20px;
+  color: white;
 }
 
 .links li {
-
-    padding: 15px 20px;
-    /* margin-bottom: 3px; */
-    /* border: 2px solid rgba(157, 227, 255, 0.144); */
-    box-shadow: -1.5px 0px 2px 0px rgba(9, 136, 255, 0.582);
-    /* border-top: 1px solid rgba(157, 227, 255, 0.315); */
-
+  padding: 15px 20px;
+  /* margin-bottom: 3px; */
+  /* border: 2px solid rgba(157, 227, 255, 0.144); */
+  box-shadow: -1.5px 0px 2px 0px rgba(9, 136, 255, 0.582);
+  /* border-top: 1px solid rgba(157, 227, 255, 0.315); */
 }
 
-.links a{
-
-    text-decoration: none;
-    color: var(--color3);
-
+.links a {
+  text-decoration: none;
+  color: var(--color3);
 }
-
 
 .links li:hover {
-
-    background-color: var(--color2);
-    
+  background-color: var(--color2);
 }
 
 .links li:hover a {
-
-    color: white;
-    
+  color: white;
 }
-
-
 
 /* styling for dashboardRight is here  */
 .dashboardRight {
-
-    width: 85%;
-    height: 100vh;
-    background-color: rgb(252, 252, 252);
-    margin-left:15% ;
-    /* padding: 40px; */
-    
+  width: 85%;
+  min-height: 100vh;
+  background-color: rgba(233, 228, 219, 0.425);
+  margin-left: 15%;
+  /* padding: 40px; */
+  overflow: hidden;
 }
 
-.dashboardRightContainer,.profileRightContainer {
 
-    padding: 40px;
-
+.dashboardRightContainer,
+.profileRightContainer {
+  padding: 40px;
 }
 
 /* HERO SECTION OF HOME PAGE  */
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: linear-gradient(to bottom, #0033cc, #66ccff);
-    color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #0033cc, #66ccff);
+  color: #fff;
 }
 
 .container {
-    text-align: center;
+  text-align: center;
 }
 
 h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 24px;
-    margin-bottom: 40px;
+  font-size: 24px;
+  margin-bottom: 40px;
 }
 
 .homeButton {
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    background-color: #0044cc;
-    color: #fff;
-    cursor: pointer;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0044cc;
+  color: #fff;
+  cursor: pointer;
 }
 
 .homeButton:hover {
-    background-color: #0022aa;
+  background-color: #0022aa;
 }
-
-
-
-
-
-
-
-
 
 
 
 
 /* ------- DASHBOARD PAGE CSS ------  */
 .dashboardRightHeaderNav {
-
-    justify-content: space-between;
-    align-items: center;
-
+  justify-content: space-between;
+  align-items: center;
 }
 
-.dashboardRightHeaderNav h2{
-
-    color: var(--color1);
-    font-size: 2rem;
-    padding-bottom: 10px;
-
+.dashboardRightHeaderNav h2 {
+  color: var(--color1);
+  font-size: 2rem;
+  padding-bottom: 10px;
 }
 
 .dashboardRightHeaderRightSide {
-
-    gap: 10px;
-
+  gap: 10px;
 }
 
 .dashboardRightHeaderSearch {
-
-    border-radius: 15px;
-    border: 1px solid gray;
-    align-items: center;
-    background-color: white;
-
+  border-radius: 15px;
+  border: 1px solid gray;
+  align-items: center;
+  background-color: white;
 }
 
 .dashboardRightHeaderSearch span {
-
-    padding-inline: 10px;
-
+  padding-inline: 10px;
 }
 
 .dashboardRightHeaderSearch input {
-
-    border: none;
-    outline: none;
-    background: none;
-    padding-block: 8px;
-
+  border: none;
+  outline: none;
+  background: none;
+  padding-block: 8px;
 }
 
-.dashboardRightHeaderAddBtn , .profileTopButton {
-
-    cursor: pointer;
-    border-radius: 15px;
-    background-color: var(--color2);
-    /* border: 1px solid var(--color1); */
-    color: white;
-    font-size: 0.9rem;
-    border: none;
-    padding-inline: 15px;
-
+.dashboardRightHeaderAddBtn,
+.profileTopButton {
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: var(--color2);
+  /* border: 1px solid var(--color1); */
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  padding-inline: 15px;
 }
 
 .dashboardRightHeaderAddBtn:hover {
-
-    background-color: var(--color1);
+  background-color: var(--color1);
 }
 
 .profileTopButton:hover {
-
-    background-color: var(--color1);
+  background-color: var(--color1);
 }
 
 .profileTopButton {
-
-    font-size: 1rem;
-    
+  font-size: 1rem;
 }
-.dashboardRightHeaderInOf {
 
-    cursor: pointer;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    border: 1px solid black;
-    font-weight: bold;
-    color: black;
-    font-size: 0.9rem;
-    justify-content: center;
-    align-items: center;
-    
+.dashboardRightHeaderInOf {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  font-weight: bold;
+  color: black;
+  font-size: 0.9rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .dashboardRightHeaderUsers {
-
-    margin-block: 20px 25px;
-
+  margin-block: 20px 25px;
 }
 
 .dashboardRightHeaderUsers ul {
-
-    list-style: none;
-    gap: 60px;
-    
-
+  list-style: none;
+  gap: 60px;
 }
 
 .dashboardRightHeaderUsers ul a {
-
-    text-decoration: none;
-    color: rgb(12, 12, 12);
-
+  text-decoration: none;
+  color: rgb(12, 12, 12);
 }
 
 .dashboardRightHeaderUsers ul a:hover {
-
-    color: red;
-
+  color: red;
 }
 
-
-
-
 /* dashboardRightData is here  */
+.DashboardR {
+    overflow: hidden;
+  }
+
 .dashboardRightData {
-
-    background-color: white;
-    /* padding: 10px; */
-    border-radius: 3px;
-    box-shadow: 0px 0px 1px 0px gray;
-
+  background-color: white;
+  /* padding: 10px; */
+  border-radius: 3px;
+  box-shadow: 0px 0px 1px 0px gray;
 }
 
 .dashboardRightData table {
-
-    width: 100%;
-    
+  width: 100%;
 }
 
-.dashboardRightData table, .dashboardRightData td {
-
-    /* border: 1px solid black; */
-    border-collapse: collapse;
-    font-size: 0.9rem;
-
+.dashboardRightData table,
+.dashboardRightData td {
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+  font-size: 0.9rem;
 }
-
 
 .dashboardRightData table td {
-
-    padding-block: 15px;
-    padding-left: 8px;
-    color: rgb(82, 82, 82);
-    /* border-bottom: 1px solid black; */
-
+  padding-block: 15px;
+  padding-left: 8px;
+  color: rgb(82, 82, 82);
+  /* border-bottom: 1px solid black; */
 }
 
 .dashboardRightData table tr {
-
-    border-bottom: 1px solid rgba(2, 0, 105, 0.219);
-
+  border-bottom: 1px solid rgba(2, 0, 105, 0.219);
 }
 
 /* .dashboardRightData table tr:hover {
@@ -457,37 +383,25 @@ h1 {
 } */
 
 .Tableheadings {
-
-    background-color: rgb(10, 0, 155);
-    /* color: rgb(255, 255, 255)!important; */
-    font-weight: bold;
-    /* border-bottom: 1px solid black; */
+  background-color: rgb(10, 0, 155);
+  /* color: rgb(255, 255, 255)!important; */
+  font-weight: bold;
+  /* border-bottom: 1px solid black; */
 }
 
-.Tableheadings td{
-
-    color: rgb(255, 255, 255)!important;
-
+.Tableheadings td {
+  color: rgb(255, 255, 255) !important;
 }
 
 #trForUsers tr:nth-child(even) {
-
-    background-color: rgba(216, 255, 255, 0.164);
+  background-color: rgba(216, 255, 255, 0.164);
 }
-
 
 #deleteUser {
-
-    color: red;
-    cursor: pointer;
-    font-weight: bold;
-    
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
 }
-
-
-
-
-
 
 
 
@@ -496,48 +410,36 @@ h1 {
 
 /* ------- PROFILE PAGE CSS ------  */
 .profileRightHeaderNav {
-
-    justify-content: space-between;
-    align-items: center;
-
+  justify-content: space-between;
+  align-items: center;
 }
 
-.profileHeading{
-
-   color: var(--color1);
-   font-size: 2rem;
-   /* padding-bottom: 10px; */
-
+.profileHeading {
+  color: var(--color1);
+  font-size: 2rem;
+  /* padding-bottom: 10px; */
 }
 
 .dashboardRightHeaderRightSide {
-
-    gap: 10px;
-
+  gap: 10px;
 }
 
 .dashboardRightHeaderSearch {
-
-    border-radius: 15px;
-    border: 1px solid gray;
-    align-items: center;
-    background-color: white;
-
+  border-radius: 15px;
+  border: 1px solid gray;
+  align-items: center;
+  background-color: white;
 }
 
 .dashboardRightHeaderSearch span {
-
-    padding-inline: 10px;
-
+  padding-inline: 10px;
 }
 
 .dashboardRightHeaderSearch input {
-
-    border: none;
-    outline: none;
-    background: none;
-    padding-block: 8px;
-
+  border: none;
+  outline: none;
+  background: none;
+  padding-block: 8px;
 }
 
 /* .profileTopButton {
@@ -553,256 +455,214 @@ h1 {
 } */
 
 .dashboardRightHeaderInOf {
-
-    cursor: pointer;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    border: 1px solid black;
-    font-weight: bold;
-    color: black;
-    font-size: 0.9rem;
-    justify-content: center;
-    align-items: center;
-    
+  cursor: pointer;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  font-weight: bold;
+  color: black;
+  font-size: 0.9rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .dashboardRightHeaderUsers {
-
-    margin-block: 20px 25px;
-
+  margin-block: 20px 25px;
 }
 
 .dashboardRightHeaderUsers ul {
-
-    list-style: none;
-    gap: 60px;
-    
-
+  list-style: none;
+  gap: 60px;
 }
 
 .dashboardRightHeaderUsers ul a {
-
-    text-decoration: none;
-    color: rgb(12, 12, 12);
-
+  text-decoration: none;
+  color: rgb(12, 12, 12);
 }
 
 .dashboardRightHeaderUsers ul a:hover {
-
-    color: red;
-
+  color: red;
 }
 
-
-
 /* styling for profileSection is here  */
-.profileSection>div {
-
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.178);
-    padding: 20px 30px;
-    border-radius: 10px;
-    margin-block: 15px;
-    position: relative;
-
+.profileSection > div {
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.178);
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin-block: 15px;
+  position: relative;
 }
 
 .profileSection h2 {
-
-    color: var(--color1);
+  color: var(--color1);
 }
 
 .editButton i {
-
-    padding-right: 5px;
-    font-size: 0.8rem;
-
+  padding-right: 5px;
+  font-size: 0.8rem;
 }
 
-.editButton,.saveButton {
-
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    padding: 6px 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    background-color: var(--color1);
-    color: white;
-
+.editButton,
+.saveButton {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color1);
+  color: white;
 }
 
 .profileTop {
-
-    align-items: center;
-    gap: 20px;
-
+  align-items: center;
+  gap: 20px;
 }
 
 .profilePhoto {
-
-    width: 115px;
-    height: 115px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 1px 2px rgb(15, 15, 15);
-    /* background-color: gray; */
-    background-image: url(https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg);
-    background-size: cover;
-    background-position: center;
-
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 2px rgb(15, 15, 15);
+  /* background-color: gray; */
+  background-image: url(https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-.profileName h2+p {
-
-    padding-block: 10px;
-
+.profileName h2 + p {
+  padding-block: 10px;
 }
 
 .profileSection table {
-
-    margin-top: 10px;
-
+  margin-top: 10px;
 }
 
 .profileSection table td {
-
-    width: 250px;
-    /* border: 1px solid black; */
-    padding-block: 5px;
-
+  width: 250px;
+  /* border: 1px solid black; */
+  padding-block: 5px;
 }
 
 #pUserEmail {
-
-    padding-block: 4px;
+  padding-block: 4px;
 }
 td input {
-
-    border : 1px solid gray;
-    border-radius: 5px;
-    background: none;
-    outline: none;
-    padding: 7px;
-    font-size: 1rem;
-    width: 280px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background: none;
+  outline: none;
+  padding: 7px;
+  font-size: 1rem;
+  width: 280px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* ------- SERVICE PAGE CSS ------  */
 .about-hero {
-    
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: linear-gradient(to bottom, #0044cc, #66ccff);
-    color: #fff;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #0044cc, #66ccff);
+  color: #fff;
 }
 
 .about-hero h1 {
-
-    text-align: center;
-    font-size: 3rem;
-    padding-bottom: 20px;
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 20px;
 }
 .boxes {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
 }
 
 .box {
-    background-color: #0022aa;
-    padding: 30px;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #0022aa;
+  padding: 30px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .box h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 .box p {
-    font-size: 18px;
+  font-size: 18px;
 }
-
-
-
-
-
 
 /* --------- CONTACT PAGE CSS ------  */
 .contact-hero {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: linear-gradient(to bottom, #0044cc, #66ccff);
-    color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #0044cc, #66ccff);
+  color: #fff;
 }
 
 .contact-hero .container {
-    text-align: center;
+  text-align: center;
 }
 
 .contact-hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
 .contact-hero .contact-form {
-    background-color: #0022aa;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #0022aa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact-hero form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-hero .personalInformation input{
-    padding: 15px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 10px;
+.contact-hero input,
+textarea {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+}
+.contact-hero .personalInformation input {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
 }
 
 .contact-hero button {
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    background-color: #0044cc;
-    color: #fff;
-    cursor: pointer;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0044cc;
+  color: #fff;
+  cursor: pointer;
 }
 
 .contact-hero .subscription {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .contact-hero .subscription h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 /* .company-logo {
@@ -810,69 +670,257 @@ td input {
 } */
 
 .company-logo img {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .company-logo p {
-    font-size: 14px;
-    color: #ffffff;
+  font-size: 14px;
+  color: #ffffff;
 }
-
-
-
-
-
-
 
 /* -------- CLASSES FOR JAVASCRIPT --------- */
 .liStyle {
-
-    background-color: var(--color2);
-    color: white !important;
-
+  background-color: var(--color2);
+  color: white !important;
 }
 
 .none {
-
-    display: none;
-    
+  display: none;
 }
 
 .show {
-
-    display: flex;
-
+  display: flex;
 }
-
-
-
 
 /* media query is here */
 /* for tablet */
-@media (min-width:425px) and (max-width:768px){
-
-    .outer-box{
-
-        flex-direction: column;
-        gap: 100px;
-        align-items: center;
-    }
-    
+@media (min-width: 425px) and (max-width: 768px) {
+  .signup,
+  .login {
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+  }
 }
 
-@media (max-width:425px){
+/* media query is here */
+/* for Mobile */
 
-    .outer-box{
+@media (max-width: 425px) {
+  h1 {
+    font-size: 1.6rem;
+  }
 
-        flex-direction: column;
-        gap: 50px;
-        align-items: center;
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  /* FOR SIGNUP AND LOGIN PAGE  */
+  .signup,
+  .login {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    height: auto;
+    margin-block: 60px;
+  }
+
+  .inner-box {
+    width: 300px;
+    padding: 20px 30px;
+  }
+
+  .signup-body > form > .input > input,
+  select {
+    padding: 6px;
+    margin-top: 3px;
+    font-size: 0.9rem;
+  }
+
+  .signup-body > form > .input > input::placeholder {
+    font-size: 0.9rem;
+  }
+
+  /* MEDIA QUERY FOR HOME PAGE  */
+  .dashboard,.profile {
+    height: auto;
+    margin-top: 60px;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+  .leftBar .logo {
+    display: none;
+  }
+
+  .leftBar {
+    position: absolute;
+    left: -100%;
+    /* height: 245px; */
+    height: auto;
+    top: 0px;
+    transition: 0.3s;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .active {
+    left: 0;
+  }
+
+  .links li {
+    text-align: center;
+  }
+
+  .dashboardRight {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .hero {
+    padding-inline: 30px;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    font-weight: light;
+  }
+
+
+
+
+
+
+  /* MEDIA QUERY FOR DASHBOARD PAGE  */
+  .dashboardRightContainer,.profileRightContainer{
+
+    padding: 40px 20px;
+
+  }
+
+  .dashboardRightHeaderSearch,.dashboardRightHeaderInOf {
+    display: none;
+  }
+
+  .dashboardRightHeaderUsers ul{
+    gap: 20px;
+    /* font-size: 0.9rem; */
+    flex-direction: column;
+
+  }
+
+  .dashboardRightData table td{
+    font-size: 0.8rem;
+  }
+
+  /* .trForUsers td:nth-child(3){
+
+    display: none;
+
+  } */
+
+  .dashboardRightHeaderAddBtn,.profileTopButton{
+    font-size: 0.8rem;
+    padding: 7px 10px;
+  }
+
+  .dashboardRightData table td{
+    padding-block: 9px;
+  }
+
+  .dashboardRightData table td{
+    padding-inline: 5px;
+  }
+
+
+
+
+
+  /* MEDIA QUERY FOR PROFILE PAGE  */
+  .profileSection > div{
+    padding: 20px 15px;
+    margin-block: 30px;
+  }
+  .profileSection table td {
+
+    width: 40%;
+    font-size: 0.9rem;
+
+  }
+
+  td input{
+    width: auto;
+    padding: 5px;
+  }
+
+  .editButton, .saveButton {
+    top: 15px;
+    right: 15px;
+    padding: 4px;
+  }
+
+  .editButton i {
+    font-size: 0.7rem;
+    padding-right: 3px;
+  }
+
+  .profileTop {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+    /* MEDIA QUERY FOR SERVICE PAGE  */
+    .about-hero{
+
+        padding:40px 30px;
+        height: auto;
     }
 
-    .inner-box,#showText {
-
-        width: 300px;
+    .box {
+        padding: 20px;
     }
+
+    .box p{
+
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+
+
+
+
+     /* MEDIA QUERY FOR CONTACT PAGE  */
+    .contact-hero {
+        height: auto;
+      }
+
+    .contact-hero h1 {
+        font-size: 3rem;
+    }
+
+    .subscription p {
+        padding-block:0px 20px;
+    }  
     
+    .contact-hero button,.contact-hero input {
+        padding:15px 18px;
+        font-size: 0.9rem;
+        margin-left: 3px;
+    }
 }

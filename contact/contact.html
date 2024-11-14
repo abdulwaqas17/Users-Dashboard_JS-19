@@ -1,95 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Company - About</title>
     <!-- <link rel="stylesheet" href="contact.css"> -->
-    <link rel="stylesheet" href="./../style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./../style.css" />
+  </head>
+  <body>
+    <!-- <a href="./../profile/profile.html"></a> -->
+    <div class="dashboard flex">
+      <!-- for mobile navbar  -->
+      <div class="mobile-nav flex">
+        <h2>Tech Inn</h2>
+        <i class="fa-solid fa-bars toggle"></i>
+      </div>
 
-       <!-- <a href="./../profile/profile.html"></a> -->
-       <div class="dashboard flex">
-
-        <!-- dashboard left is here  -->
-        <div class="dashboardLeft">
-
-            <!-- company logo is here  -->
-            <div class="logo">
-
-                <h2>Tech.co</h2>
-
-            </div>
-
-            <!-- links is here  -->
-            <div class="links">
-
-              
-  
-                <ul>
-                    
-                    <li onclick="showHome()" id="home"><a href="javascript:void(0)">Home</a></li>
-
-                    <li onclick="showDashboard()" id="dashboard"><a href="javascript:void(0)" >Dashboard</a></li>
-
-                    <li  onclick="showProfile()" id="profile"><a href="javascript:void(0)">Profile</a></li>
-
-                    <li  id="services"><a href="./../services/service.html">Services</a></li>
-
-                    <li  id="contact"><a href="./contact.html">Contact Us</a></li>
-
-
-                </ul>
-
-            </div>
-
+      <!-- dashboard left is here  -->
+      <div class="leftBar">
+        <!-- company logo is here  -->
+        <div class="logo">
+          <h2>Tech Inn</h2>
         </div>
 
-        <!-- dashboard Right is here  -->
-        <div class="dashboardRight">
+        <!-- links is here  -->
+        <div class="links">
+          <ul>
+            <li onclick="showHome()" id="home">
+              <a href="javascript:void(0)">Home</a>
+            </li>
 
-            <div class="conatctRightContainer">
+            <li onclick="showDashboard()" id="dashboard">
+              <a href="javascript:void(0)">Dashboard</a>
+            </li>
 
-                <section class="contact-hero">
-                    <div class="container">
-                        <h1>Contact Us</h1>
-                        <div class="contact-form">
-                            <form>
-                                <input type="text" placeholder="Name">
-                                <input type="email" placeholder="Email">
-                                <textarea placeholder="Message"></textarea>
-                                <button>Send Message</button>
-                            </form>
-                        </div>
-                        <div class="subscription">
-                            <h2>Stay Updated</h2>
-                            <p>Subscribe to our newsletter for latest updates.</p>
-                            <input type="email" placeholder="Email">
-                            <button>Subscribe</button>
-                        </div>
-                        <div class="company-logo">
-                            <p>Tech Inn</p>
-                            <p>&copy; 2023 Tech Company. All Rights Reserved.</p>
-                        </div>
-                    </div>
-                </section>
-            
+            <li onclick="showProfile()" id="profile">
+              <a href="javascript:void(0)">Profile</a>
+            </li>
 
-            
-                
+            <li id="services">
+              <a href="./../services/service.html">Services</a>
+            </li>
 
-                
-            </div>
-
+            <li id="contact"><a href="./contact.html">Contact Us</a></li>
+          </ul>
         </div>
+      </div>
 
-        
-
+      <!-- dashboard Right is here  -->
+      <div class="dashboardRight">
+        <div class="conatctRightContainer">
+          <section class="contact-hero">
+            <div class="container">
+              <h1>Contact Us</h1>
+              <div class="contact-form">
+                <form>
+                  <input type="text" placeholder="Name" />
+                  <input type="email" placeholder="Email" />
+                  <textarea placeholder="Message"></textarea>
+                  <button>Send Message</button>
+                </form>
+              </div>
+              <div class="subscription">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for latest updates.</p>
+                <input type="email" placeholder="Email" />
+                <button>Subscribe</button>
+              </div>
+              <div class="company-logo">
+                <p>Tech Inn</p>
+                <p>&copy; 2023 Tech Company. All Rights Reserved.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
 
     <script src="./../app.js"></script>
-    
-</body>
+  </body>
 </html>
-

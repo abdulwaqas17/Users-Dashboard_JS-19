@@ -1,86 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Inn</title>
     <!-- <link rel="stylesheet" href="service.css"> -->
-    <link rel="stylesheet" href="./../style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./../style.css" />
+  </head>
+  <body>
+    <!-- <a href="./../profile/profile.html"></a> -->
+    <div class="dashboard flex">
+      <!-- dashboard left is here  -->
 
-       <!-- <a href="./../profile/profile.html"></a> -->
-       <div class="dashboard flex">
+      
+         <!-- for mobile navbar  -->
+         <div class="mobile-nav flex">
+            <h2>Tech Inn</h2>
+            <i class="fa-solid fa-bars toggle"></i>
+          </div>
 
-        <!-- dashboard left is here  -->
-        <div class="dashboardLeft">
-
-            <!-- company logo is here  -->
-            <div class="logo">
-
-                <h2>Tech Inn</h2>
-
-            </div>
-
-            <!-- links is here  -->
-            <div class="links">
-
-              
-  
-                <ul>
-                    
-                    <li onclick="showHome()" id="home"><a href="javascript:void(0)">Home</a></li>
-
-                    <li onclick="showDashboard()" id="dashboard"><a href="javascript:void(0)" >Dashboard</a></li>
-
-                    <li  onclick="showProfile()" id="profile"><a href="javascript:void(0)">Profile</a></li>
-
-                    <li id="services"><a href="./service.html">Services</a></li>
-
-                    <li id="contact"><a href="./../contact/contact.html">Contact Us</a></li>
-
-
-                </ul>
-
-            </div>
-
+      <div class="leftBar">
+     
+        <!-- company logo is here  -->
+        <div class="logo">
+          <h2>Tech Inn</h2>
         </div>
 
-        <!-- dashboard Right is here  -->
-        <div class="dashboardRight">
+        <!-- links is here  -->
+        <div class="links">
+          <ul>
+            <li onclick="showHome()" id="home">
+              <a href="javascript:void(0)">Home</a>
+            </li>
 
-            <div class="serviceRightContainer">
+            <li onclick="showDashboard()" id="dashboard">
+              <a href="javascript:void(0)">Dashboard</a>
+            </li>
 
-                <section class="about-hero">
-                    <div class="container">
-                        <h1>Our Services</h1>
-                        <div class="boxes">
-                            <div class="box">
-                                <h2>Our Mission</h2>
-                                <p>We're driven to innovate and simplify technology for everyone.</p>
-                            </div>
-                            <div class="box">
-                                <h2>Our Team</h2>
-                                <p>Meet our diverse team of experts passionate about shaping the future.</p>
-                            </div>
-                            <div class="box">
-                                <h2>Our Values</h2>
-                                <p>Integrity, innovation, and customer satisfaction guide everything we do.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
+            <li onclick="showProfile()" id="profile">
+              <a href="javascript:void(0)">Profile</a>
+            </li>
 
-                
-            </div>
+            <li id="services"><a href="./service.html">Services</a></li>
 
+            <li id="contact">
+              <a href="./../contact/contact.html">Contact Us</a>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        
+      
 
+      <!-- dashboard Right is here  -->
+      <div class="dashboardRight">
+        <div class="serviceRightContainer">
+          <section class="about-hero">
+            <div class="container">
+              <h1>Our Services</h1>
+              <div class="boxes">
+                <div class="box">
+                  <h2>Our Mission</h2>
+                  <p>
+                    We're driven to innovate and simplify technology for
+                    everyone.
+                  </p>
+                </div>
+                <div class="box">
+                  <h2>Our Team</h2>
+                  <p>
+                    Meet our diverse team of experts passionate about shaping
+                    the future.
+                  </p>
+                </div>
+                <div class="box">
+                  <h2>Our Values</h2>
+                  <p>
+                    Integrity, innovation, and customer satisfaction guide
+                    everything we do.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
     <script src="./../app.js"></script>
-</body>
+  </body>
 </html>
-

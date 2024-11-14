@@ -614,12 +614,26 @@ function showDashboard() {
 
 }
 
-var home = document.getElementById('home');
-var about = document.getElementById('about');
-var services = document.getElementById('services');
-var contact = document.getElementById('contact');
-var dashboard = document.getElementById('dashboard');
-var profile = document.getElementById('profile');
+// for mobile device navbar 
+let toggle = document.querySelector('.toggle');
+let leftBar = document.querySelector('.leftBar');
+
+console.log(toggle,leftBar);
+
+// add event on toggle to show navbar 
+toggle.addEventListener('click', () => {
+
+    leftBar.classList.toggle("active");
+
+}
+);
+
+// var home = document.getElementById('home');
+// var about = document.getElementById('about');
+// var services = document.getElementById('services');
+// var contact = document.getElementById('contact');
+// var dashboard = document.getElementById('dashboard');
+// var profile = document.getElementById('profile');
 
 
 
