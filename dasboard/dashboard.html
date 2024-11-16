@@ -87,14 +87,66 @@
 
             <!-- dashboardRightHeaderUsers is here  -->
             <div class="dashboardRightHeaderUsers">
-              <ul class="flex">
-                <li><a href="#" id="totalUsers">All Users 235</a></li>
+              <ul class="flex userCount">
+                <!-- <li><a href="#" id="totalUsers">All Users 235</a></li> -->
+                <li class="flex">
 
-                <li><a href="#" id="totalAdmins">Admins 35</a></li>
+                  <div class="Uicon">
+                    <i class="fa-solid fa-users"></i>
+                  </div>
+
+                  <div class="textAndNum">
+                    <h3><a href="#" id="totalUsers">0</a></h3>
+                    <p>Total Users</p>
+                  </div>
+
+                </li>
+                
+                <li class="flex">
+
+                  <div class="Uicon">
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+
+                  <div class="textAndNum">
+                    <h3><a href="#" id="totalAdmins">0</a></h3>
+                    <p>Admins</p>
+                  </div>
+
+                </li>
+
+                <li class="flex">
+
+                  <div class="Uicon">
+                    <i class="fa-solid fa-user-shield"></i>
+                  </div>
+
+                  <div class="textAndNum">
+                    <h3><a href="#" id="totalManagers">0</a></h3>
+                    <p>Managers</p>
+                  </div>
+
+                </li>
+
+                <li class="flex">
+
+                  <div class="Uicon">
+                    <i class="fa-solid fa-user-group"></i>
+                    <!-- <i class="fa-solid fa-user"></i> -->
+                  </div>
+
+                  <div class="textAndNum">
+                    <h3><a href="#" id="totalEmployees">0</a></h3>
+                    <p>Employees</p>
+                  </div>
+
+                </li>
+
+                <!-- <li><a href="#" id="totalAdmins">Admins 35</a></li>
 
                 <li><a href="#" id="totalManagers">Managers 50</a></li>
 
-                <li><a href="#" id="totalEmployees">Employees 150</a></li>
+                <li><a href="#" id="totalEmployees">Employees 150</a></li> -->
               </ul>
             </div>
           </div>
@@ -110,7 +162,43 @@
               </tr>
 
               <tbody id="trForUsers">
-                <!-- <tr>
+                 <tr>
+
+                            <td>Muhammad Waqas</td>
+                            <td>waqas123@gmail.com</td>
+                            <td>Karachi</td>
+                            <td colspan="2">Admin</td>
+
+                        </tr>  
+
+                        <tr>
+
+                            <td>Zeeshan Ahmed</td>
+                            <td>zeeshansd63@gmail.com</td>
+                            <td>Lahore</td>
+                            <td colspan="2">Manager</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Nehal Qureshi</td>
+                            <td>nehal80@gmail.com</td>
+                            <td>Multan</td>
+                            <td colspan="2">Employee</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Abdullah</td>
+                            <td>abdullah99@gmail.com</td>
+                            <td>Quetta</td>
+                            <td colspan="2">Admin</td>
+
+                        </tr>
+
+                        <!-- <tr>
 
                             <td>Muhammad Waqas</td>
                             <td>waqas123@gmail.com</td>
@@ -144,43 +232,7 @@
                             <td>Quetta</td>
                             <td>Admin</td>
 
-                        </tr>
-
-                        <tr>
-
-                            <td>Muhammad Waqas</td>
-                            <td>waqas123@gmail.com</td>
-                            <td>Karachi</td>
-                            <td>Admin</td>
-
-                        </tr>  
-
-                        <tr>
-
-                            <td>Zeeshan Ahmed</td>
-                            <td>zeeshansd63@gmail.com</td>
-                            <td>Lahore</td>
-                            <td>Manager</td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>Nehal Qureshi</td>
-                            <td>nehal80@gmail.com</td>
-                            <td>Multan</td>
-                            <td>Employe</td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>Abdullah</td>
-                            <td>abdullah99@gmail.com</td>
-                            <td>Quetta</td>
-                            <td>Admin</td>
-
-                        </tr> -->
+                        </tr>  -->
               </tbody>
             </table>
           </div>
@@ -191,29 +243,27 @@
     <script src="./../app.js"></script>
 
     <script>
-      var totalAdmins = parseInt(window.localStorage.getItem("totalAdmin"));
-      var totalManagers = parseInt(window.localStorage.getItem("totalManager"));
-      var totalEmployees = parseInt(
-        window.localStorage.getItem("totalEmployee")
-      );
+      var totalAdmins = parseInt(window.localStorage.getItem("totalAdmin")) || 0;
+      var totalManagers = parseInt(window.localStorage.getItem("totalManager")) || 0;
+      var totalEmployees = parseInt(window.localStorage.getItem("totalEmployee")) || 0;
 
       console.log(totalAdmins, totalManagers, totalEmployees);
 
       document.getElementById("totalUsers").innerHTML = `
         
-        Total Users ${totalAdmins + totalManagers + totalEmployees}`;
+        ${totalAdmins + totalManagers + totalEmployees}`;
 
       document.getElementById("totalAdmins").innerHTML = `
         
-        Total Admins ${totalAdmins}`;
+        ${totalAdmins}`;
 
       document.getElementById("totalManagers").innerHTML = `
         
-        Total Managers ${totalManagers}`;
+         ${totalManagers}`;
 
       document.getElementById("totalEmployees").innerHTML = `
         
-        Total Employees ${totalEmployees}`;
+        ${totalEmployees}`;
 
       // document.querySelector('.dashboardRightContainer').innerText = 'abc'
       // document.getElementById('abcd').innerHTML = 'Hello';
