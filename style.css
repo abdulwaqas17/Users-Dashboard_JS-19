@@ -9,6 +9,10 @@
   font-family: "Lato", sans-serif;
 }
 
+/* body{
+  overflow: hidden;
+} */
+
 /* root classes  */
 /* :root {
 
@@ -212,11 +216,12 @@ select {
 .dashboardRight {
   width: 85%;
   /* min-height: 100vh; */
+  /* background-color: #d1ae11; */
   background-color: #f7f5ec;
   margin-left: 15%;
   /* padding: 40px; */
-  overflow: hidden;
-  height: auto;
+  /* overflow: hidden; */
+  min-height: 100vh;
 }
 
 
@@ -522,9 +527,51 @@ h1 {
   border-radius: 50%;
   box-shadow: 0px 0px 1px 2px rgb(15, 15, 15);
   /* background-color: gray; */
-  background-image: url(https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg);
+  /* background-image: url(https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg); */
   background-size: cover;
   background-position: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.profilePhoto img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: .3s;
+  
+  
+}
+
+
+
+.uploadImg {
+  /* padding: 5px 10px ; */
+  font-size: 0.7rem;
+  background-color: var(--color1);
+  color: white;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilePhoto img:hover {
+  opacity: 0.5;
+}
+
+/* .profilePhoto img:hover .uploadImg {
+  opacity: 1;
+} */
+
+#file-input {
+  display: none;
 }
 
 .profileName h2 + p {
@@ -768,9 +815,16 @@ textarea {
   .active {
     left: 0;
   }
+/* 
+  .links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
 
   .links li {
-    text-align: center;
+    padding-left: 140px;
   }
 
   .dashboardRight {
@@ -819,15 +873,29 @@ textarea {
     padding: 25px 50px;
   }
 
-  .dashboardRightData table td{
-    font-size: 0.7rem;
+  .dashboardRightData{
+
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    /* width: 1; */
   }
 
-  .trForUsers tr td:nth-child(3){
+  .dashboardRightData table {
+
+    width: 700px; 
+    /* display: table;  */
+  }
+  .dashboardRightData table td{
+    font-size: 0.95rem;
+    padding-right: 30px;
+  }
+
+  /* .trForUsers tr td:nth-child(3){
 
     display: none;
 
-  }
+  } */
 
   .dashboardRightHeaderAddBtn,.profileTopButton{
     font-size: 0.95rem;
@@ -835,11 +903,12 @@ textarea {
   }
 
   .dashboardRightData table td{
-    padding-block: 9px;
+    width: auto;
+    padding-block: 12px;
   }
 
   .dashboardRightData table td{
-    padding-inline: 5px;
+    padding-inline:15px;
   }
 
 

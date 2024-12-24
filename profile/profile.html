@@ -36,15 +36,15 @@
                 
                 <ul>
                     
-                    <li onclick="showHome()" id="home"><a href="javascript:void(0)">Home</a></li>
+                    <li onclick="showHome()" id="home"><a href="javascript:void(0)"><i class="fa-solid fa-house-user"></i>Home</a></li>
 
-                    <li onclick="showDashboard()" id="dashboard"><a href="javascript:void(0)" >Dashboard</a></li>
+                    <li onclick="showDashboard()" id="dashboard"><a href="javascript:void(0)" ><i class="fa-solid fa-database"></i>Dashboard</a></li>
 
-                    <li  onclick="showProfile()" id="profile"><a href="javascript:void(0)">Profile</a></li>
+                    <li  onclick="showProfile()" style="background-color: var(--color2);" id="profile"><a href="javascript:void(0)"><i class="fa-solid fa-circle-user"></i>Profile</a></li>
 
-                    <li  id="services"><a href="./../services/service.html">Services</a></li>
+                    <li  id="services"><a href="./../services/service.html"><i class="fa-solid fa-list-check"></i>Services</a></li>
 
-                    <li  id="contact"><a href="./../contact/contact.html">Contact Us</a></li>
+                    <li  id="contact"><a href="./../contact/contact.html"><i class="fa-solid fa-envelope"></i>Contact Us</a></li>
 
 
                 </ul>
@@ -123,7 +123,12 @@
                     <div class="profileTop flex">
 
                         <!-- profilePhoto is here  -->
-                        <div class="profilePhoto"></div>
+                        <label for="file-input" class="profilePhoto" >
+                            <img src="https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg" alt="" id="profile-pic">
+                            <!-- <div class="uploadImg">Upload Image</div> -->
+                            <span class="uploadImg"> <i class="fa-solid fa-pen"></i></span>
+                        </label>
+                        <input type="file" accept="image/jpeg, image/png, image/jpg" id="file-input">
 
                         <!-- profileName is here  -->
                         <div class="profileName">
@@ -251,6 +256,8 @@
         console.log(currentUserData);
         console.log(currentUserIndex);
 
+
+// --------- editData
         function editData() {
 
             var uName = document.getElementById('input1');
@@ -264,6 +271,8 @@
 
         }
 
+
+// ------------- saveData
         function saveData() {
 
             console.log('now');
@@ -279,9 +288,13 @@
 
             currentAllUsers.splice(currentUserIndex,1,currentUserData);
 
-            alert('Your Changes Successfully changed, Refreash the page');
+            // alert('Your Changes Successfully changed, Refreash the page');
 
             window.localStorage.setItem('Users',JSON.stringify(currentAllUsers));
+
+            alert('Your changes done successfully')
+
+            location.reload();
 
         }
 

@@ -26,7 +26,7 @@
       <div class="leftBar">
         <!-- company logo is here  -->
         <div class="logo">
-          <h2>Tech.co</h2>
+          <h2>Tech Inn</h2>
         </div>
 
         <!-- <a href="./../homepage/home.html"></a> -->
@@ -34,23 +34,24 @@
         <div class="links">
           <ul>
             <li onclick="showHome()" id="home">
-              <a href="javascript:void(0)">Home</a>
+              
+              <a href="javascript:void(0)"><i class="fa-solid fa-house-user"></i>Home</a>
             </li>
 
-            <li onclick="showDashboard()" id="dashboard">
-              <a href="javascript:void(0)">Dashboard</a>
+            <li onclick="showDashboard()" style="background-color: var(--color2);" id="dashboard">
+              <a href="javascript:void(0)"><i class="fa-solid fa-database"></i>Dashboard</a>
             </li>
 
             <li onclick="showProfile()" id="profile">
-              <a href="javascript:void(0)">Profile</a>
+              <a href="javascript:void(0)"><i class="fa-solid fa-circle-user"></i>Profile</a>
             </li>
 
             <li onclick="showServices()" id="services">
-              <a href="./../services/service.html">Services</a>
+              <a href="./../services/service.html"><i class="fa-solid fa-list-check"></i>Services</a>
             </li>
 
             <li onclick="showContact()" id="contact">
-              <a href="./../contact/contact.html">Contact Us</a>
+              <a href="./../contact/contact.html"><i class="fa-solid fa-envelope"></i>Contact Us</a>
             </li>
           </ul>
         </div>
@@ -234,6 +235,7 @@
 
                         </tr>  -->
               </tbody>
+
             </table>
           </div>
         </div>
@@ -408,8 +410,9 @@
         allUsers.splice(deleteUserIndex, 1);
         window.localStorage.setItem("Users", JSON.stringify(allUsers));
         alert(
-          deleteUserObj.userName + " deleted successfully, Refreash the page"
+          deleteUserObj.userName + " deleted successfully,"
         );
+        location.reload();
       });
 
       // console.dir(trForUsers);

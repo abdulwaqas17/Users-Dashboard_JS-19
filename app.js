@@ -173,7 +173,7 @@ function signupDataStore() {
     // // return false;
 }
 
-// console.log(users);
+
 
 // for rander back to signup page 
 function againSignUp() {
@@ -185,6 +185,10 @@ function againSignUp() {
 
 }
 
+
+
+
+
 // for rander back to login page 
 function againLogin() {
 
@@ -193,6 +197,10 @@ function againLogin() {
     // return false;
 
 }
+
+
+
+
 
 // for rander back to home page 
 function showHome() {
@@ -208,6 +216,9 @@ function showHome() {
     
 
 }
+
+
+
 
 
 // match the data to local storage and go to homepage 
@@ -281,6 +292,8 @@ function loginMatchData() {
 
 
 
+
+// ----------- showProfile
 function showProfile() {
 
     window.location.href = './../profile/profile.html';
@@ -450,6 +463,9 @@ function showProfile() {
 
 }
 
+
+
+// ------------ showProfile
 function showDashboard() {
 
     window.location.href = './../dasboard/dashboard.html';
@@ -612,6 +628,19 @@ function showDashboard() {
     // document.getElementById('dashboardLi').classList.add('liStyle');
     // document.getElementById('profileLi').classList.remove('liStyle');
 
+}
+
+
+
+// ------ for uploading pic 
+if(document.getElementById('profile-pic')) {
+
+    let profilePic = document.getElementById('profile-pic');
+    let fileInput = document.getElementById('file-input');
+
+    fileInput.onchange = function() {
+        profilePic.src = URL.createObjectURL(fileInput.files[0]);
+    }
 }
 
 // for mobile device navbar 
