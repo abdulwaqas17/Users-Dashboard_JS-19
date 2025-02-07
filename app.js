@@ -632,6 +632,36 @@ function showDashboard() {
 
 
 
+
+
+
+// --------------- searching
+function searchData() {
+    let searchInput = document.querySelector('#SearchInput').value.toLowerCase();
+    let trs = document.querySelectorAll('#trForUsers tr');
+    
+    console.log(trs);
+    for(let i = 0; i < trs.length ; i++) {
+
+        let td = trs[i].getElementsByTagName('td')[0];
+
+        if(td) {
+
+            let tdValue = td.innerHTML;
+
+            if(tdValue.toLowerCase().indexOf(searchInput) > -1) {
+
+                trs[i].style.display = '';
+
+            } else {
+                trs[i].style.display = 'none';
+            }
+        }
+    }
+}
+
+
+
 // ------ for uploading pic 
 if(document.getElementById('profile-pic')) {
 
