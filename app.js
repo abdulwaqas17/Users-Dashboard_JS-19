@@ -640,21 +640,27 @@ function searchData() {
     let searchInput = document.querySelector('#SearchInput').value.toLowerCase();
     let trs = document.querySelectorAll('#trForUsers tr');
     
-    console.log(trs);
+    console.log(trs); // node list of trs of tbody
     for(let i = 0; i < trs.length ; i++) {
 
+        // first time m i = 0, SO [trs[0].getElementsByTagName('td')[0]] BECAUES ('td')[0] TR K ANDER 4 TDS HN, HUMAIN SRIF 1 CHAHIE
         let td = trs[i].getElementsByTagName('td')[0];
 
         if(td) {
 
             let tdValue = td.innerHTML;
 
+            // 'ABCD'.INDEXOF(BCD) ===> 1 WHICH IS > -1
             if(tdValue.toLowerCase().indexOf(searchInput) > -1) {
 
+                // TO US TR KO KUCH NHE KRO
                 trs[i].style.display = '';
 
             } else {
+
+                // AGER CONDITION FALSE HOTI H TO, US TR K NONE KR DO
                 trs[i].style.display = 'none';
+
             }
         }
     }
@@ -668,8 +674,22 @@ if(document.getElementById('profile-pic')) {
     let profilePic = document.getElementById('profile-pic');
     let fileInput = document.getElementById('file-input');
 
+    // window.localStorage.setItem('profilePic',URL.createObjectURL(fileInput.files[0]));
+    // profilePic.src = window.localStorage.getItem('profilePic'); // same
+
+    if(window.localStorage.getItem('profilePic')) {
+        profilePic.src = window.localStorage.getItem('profilePic'); // same
+    } 
+
+    // console.log('after refreash',  window.localStorage.getItem('profilePic'));
+
     fileInput.onchange = function() {
-        profilePic.src = URL.createObjectURL(fileInput.files[0]);
+        window.localStorage.setItem('profilePic',URL.createObjectURL(fileInput.files[0]));
+        profilePic.src = window.localStorage.getItem('profilePic'); // same
+
+        console.log(URL.createObjectURL(fileInput.files[0],'URL.createObjectURL(fileInput.files[0]'));
+        console.log(window.localStorage.getItem('profilePic'),'local');
+        console.log(profilePic.src,'profilePic.src');
     }
 }
 
