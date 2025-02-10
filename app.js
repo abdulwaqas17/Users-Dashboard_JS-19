@@ -671,26 +671,71 @@ function searchData() {
 // ------ for uploading pic 
 if(document.getElementById('profile-pic')) {
 
-    let profilePic = document.getElementById('profile-pic');
-    let fileInput = document.getElementById('file-input');
+    let profilePic = document.getElementById('profile-pic'); // img
+    let fileInput = document.getElementById('file-input'); // input
 
     // window.localStorage.setItem('profilePic',URL.createObjectURL(fileInput.files[0]));
     // profilePic.src = window.localStorage.getItem('profilePic'); // same
 
+    // ager local storage m img ka url h to
     if(window.localStorage.getItem('profilePic')) {
         profilePic.src = window.localStorage.getItem('profilePic'); // same
     } 
 
+    // Issue yeh hai ke tum URL.createObjectURL(fileInput.files[0]) ka use kar rahe ho, jo ek temporary blob URL generate karta hai. Yeh URL sirf tab tak valid rehta hai jab tak page refresh nahi hota. Jese hi page refresh hota hai, woh blob URL invalid ho jata hai, is wajah se image load nahi ho rahi.
+
     // console.log('after refreash',  window.localStorage.getItem('profilePic'));
 
-    fileInput.onchange = function() {
-        window.localStorage.setItem('profilePic',URL.createObjectURL(fileInput.files[0]));
-        profilePic.src = window.localStorage.getItem('profilePic'); // same
+    // fileInput.onchange = function() {
+    //     window.localStorage.setItem('profilePic',URL.createObjectURL(fileInput.files[0]));
+    //     profilePic.src = window.localStorage.getItem('profilePic'); // same
 
-        console.log(URL.createObjectURL(fileInput.files[0],'URL.createObjectURL(fileInput.files[0]'));
-        console.log(window.localStorage.getItem('profilePic'),'local');
-        console.log(profilePic.src,'profilePic.src');
-    }
+    //     // console.log(URL.createObjectURL(fileInput.files[0],'URL.createObjectURL(fileInput.files[0]'));
+    //     // console.log(window.localStorage.getItem('profilePic'),'local');
+    //     // console.log(profilePic.src,'profilePic.src');
+    // }
+
+    // Base64 String Method
+    fileInput.onchange = function () {
+        let file = fileInput.files[0]; // selected img file
+        let reader = new FileReader(); // new (1)
+    
+        // jab fileReader ka kam khatam hoga Tab ye chaly ga (3)
+        reader.onload = function (event) {
+          let base64Image = event.target.result;
+          window.localStorage.setItem("profilePic", base64Image);
+          profilePic.src = base64Image;
+        };
+    
+        reader.readAsDataURL(file); // (2) file reading ka kam start kia
+      };
+
+
+      /* 
+Yeh onchange event listener hai jo tab chalega jab user koi naya image file select karega.
+
+fileInput.files[0] → Yeh user ka selected image file hai.
+
+new FileReader() → File ko read karne ke liye ek FileReader object banaya.
+      
+reader.onload tab chalega jab FileReader file read kar lega.
+
+event.target.result → Yeh us file ka Base64 string hai (matlab ek text representation of the image).
+
+localStorage.setItem("profilePic", base64Image); → Base64 string ko localStorage me save kar diya taa ke refresh ke baad bhi mil sake.
+
+profilePic.src = base64Image; → Image ko <img> tag ke src me set kiya taa ke dikh sake.
+
+readAsDataURL(file) file ko Base64 me convert karta hai.
+
+Jab conversion complete hoti hai, onload function chalta hai aur image ko localStorage me store kar deta hai.
+
+new FileReader(); → Ek FileReader object bana.
+onload function define kiya → Yeh tabhi chalega jab FileReader ka kaam complete hoga.
+readAsDataURL(file); → File read hone ka process start kiya.
+Jaise hi file ka reading complete hoti hai, onload function execute hota hai.
+
+*/
 }
 
 // for mobile device navbar 
